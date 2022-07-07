@@ -5,7 +5,7 @@ ruby '2.7.0'
 gem 'rack-cors'
 gem 'devise'
 gem 'devise-jwt'
-gem 'devise-jwt-cookie', '~> 0.2.0'
+gem 'devise-jwt-cookie', '~> 0.3.0'
 gem 'rubocop'
 gem 'dotenv-rails', groups: [:development, :test]
 

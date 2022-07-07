@@ -60,7 +60,7 @@ GEM
     devise-jwt (0.8.1)
       devise (~> 4.0)
       warden-jwt_auth (~> 0.5)
-    devise-jwt-cookie (0.2.0)
+    devise-jwt-cookie (0.3.0)
       devise-jwt (~> 0.6)
       dry-auto_inject (~> 0.6)
       dry-configurable (~> 0.9, < 0.11)
@@ -200,7 +200,7 @@ DEPENDENCIES
   byebug
   devise
   devise-jwt
-  devise-jwt-cookie (~> 0.2.0)
+  devise-jwt-cookie (~> 0.3.0)
   dotenv-rails
   listen (>= 3.0.5, < 3.2)
   puma (~> 3.11)
