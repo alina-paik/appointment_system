@@ -1442,3 +1442,644 @@ Filter chain halted as :verify_signed_out_user rendered or redirected
 Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 0.9ms)
 
 
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+Migrating to AddToUsers (20220708101632)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+Migrating to AddToUsers (20220708101632)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "users" ADD "name" varchar NOT NULL[0m
+  ↳ db/migrate/20220708101632_add_to_users.rb:4
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Destroy (13.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 2]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Destroy (6.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+Migrating to AddToUsers (20220708101632)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "name" varchar NOT NULL[0m
+  ↳ db/migrate/20220708101632_add_to_users.rb:4
+  [1m[35m (0.7ms)[0m  [1m[31mrollback transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+Migrating to AddToUsers (20220708101632)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (1.7ms)[0m  [1m[35mALTER TABLE "users" ADD "name" varchar[0m
+  ↳ db/migrate/20220708101632_add_to_users.rb:4
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "users" ADD "phone_number" varchar[0m
+  ↳ db/migrate/20220708101632_add_to_users.rb:5
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220708101632"]]
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (7.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+Migrating to AddToUsers (20220708101632)
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ausers" ("id" integer NOT NULL PRIMARY KEY, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar DEFAULT NULL, "reset_password_sent_at" datetime DEFAULT NULL, "remember_created_at" datetime DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "name" varchar DEFAULT NULL, "phone_number" varchar DEFAULT NULL)[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "tindex_ausers_on_reset_password_token" ON "ausers" ("reset_password_token")[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "tindex_ausers_on_email" ON "ausers" ("email")[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "ausers" ("id","email","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at","created_at","updated_at","name","phone_number")
+                     SELECT "id","email","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at","created_at","updated_at","name","phone_number" FROM "users"[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (1.7ms)[0m  [1m[35mDROP TABLE "users"[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer NOT NULL PRIMARY KEY, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar DEFAULT NULL, "reset_password_sent_at" datetime DEFAULT NULL, "remember_created_at" datetime DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "name" varchar DEFAULT NULL)[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "users" ("id","email","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at","created_at","updated_at","name")
+                     SELECT "id","email","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at","created_at","updated_at","name" FROM "ausers"[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.9ms)[0m  [1m[35mDROP TABLE "ausers"[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ausers" ("id" integer NOT NULL PRIMARY KEY, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar DEFAULT NULL, "reset_password_sent_at" datetime DEFAULT NULL, "remember_created_at" datetime DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "name" varchar DEFAULT NULL)[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "tindex_ausers_on_reset_password_token" ON "ausers" ("reset_password_token")[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "tindex_ausers_on_email" ON "ausers" ("email")[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "ausers" ("id","email","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at","created_at","updated_at","name")
+                     SELECT "id","email","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at","created_at","updated_at","name" FROM "users"[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE "users"[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer NOT NULL PRIMARY KEY, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar DEFAULT NULL, "reset_password_sent_at" datetime DEFAULT NULL, "remember_created_at" datetime DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "users" ("id","email","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at","created_at","updated_at")
+                     SELECT "id","email","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at","created_at","updated_at" FROM "ausers"[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "ausers"[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.7ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20220708101632"]]
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (8.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+Migrating to AddToUsers (20220708101632)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "users" ADD "name" varchar NOT NULL[0m
+  ↳ db/migrate/20220708101632_add_to_users.rb:4
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+Migrating to AddToUsers (20220708101632)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "name" varchar NOT NULL[0m
+  ↳ db/migrate/20220708101632_add_to_users.rb:4
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+Migrating to AddToUsers (20220708101632)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "users" ADD "name" varchar NOT NULL[0m
+  ↳ db/migrate/20220708101632_add_to_users.rb:4
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+Migrating to AddToUsers (20220708101632)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (1.8ms)[0m  [1m[35mALTER TABLE "users" ADD "name" varchar DEFAULT '' NOT NULL[0m
+  ↳ db/migrate/20220708101632_add_to_users.rb:4
+  [1m[35m (0.7ms)[0m  [1m[31mrollback transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+Migrating to CreateJwtDenylist (20220706112153)
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (1.1ms)[0m  [1m[35mDROP INDEX "index_jwt_denylist_on_jti"[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE "jwt_denylist"[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.8ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20220706112153"]]
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (6.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+Migrating to CreateJwtDenylist (20220706112153)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20220706112153_create_jwt_denylist.rb:3
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "jwt_denylist" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "jti" varchar NOT NULL, "exp" datetime NOT NULL)[0m
+  ↳ db/migrate/20220706112153_create_jwt_denylist.rb:3
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE  INDEX "index_jwt_denylist_on_jti" ON "jwt_denylist" ("jti")[0m
+  ↳ db/migrate/20220706112153_create_jwt_denylist.rb:7
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220706112153"]]
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (5.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+Migrating to AddToUsers (20220708101632)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (1.9ms)[0m  [1m[35mALTER TABLE "users" ADD "name" varchar DEFAULT '' NOT NULL[0m
+  ↳ db/migrate/20220708101632_add_to_users.rb:4
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+Migrating to AddToUsers (20220708101632)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (2.1ms)[0m  [1m[35mALTER TABLE "users" ADD "name" varchar DEFAULT '' NOT NULL[0m
+  ↳ db/migrate/20220708101632_add_to_users.rb:4
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "users" ADD "phone_number" varchar DEFAULT '' NOT NULL[0m
+  ↳ db/migrate/20220708101632_add_to_users.rb:5
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20220708101632_add_to_users.rb:7
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "unique_user_phone_number" ON "users" ("phone_number")[0m
+  ↳ db/migrate/20220708101632_add_to_users.rb:7
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220708101632"]]
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+Started POST "/users" for ::1 at 2022-07-08 14:25:31 +0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"email"=>"12345@email.com", "password"=>"[FILTERED]", "name"=>"sdfghj", "phone_number"=>"123456789"}, "registration"=>{"user"=>{"email"=>"12345@email.com", "password"=>"[FILTERED]", "name"=>"sdfghj", "phone_number"=>"123456789"}}}
+Unpermitted parameters: :name, :phone_number
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "12345@email.com"], ["encrypted_password", "$2a$12$UBOhXNS6P1cOgEUgU22D5OAoobmVLth.Bf0DAWXVNDNS/LE4H.GGi"], ["created_at", "2022-07-08 11:25:32.487081"], ["updated_at", "2022-07-08 11:25:32.487081"]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[35m (8.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 437ms (Views: 0.6ms | ActiveRecord: 12.7ms)
+
+
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started POST "/users" for ::1 at 2022-07-08 14:45:54 +0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (undefined method `before_filter' for Users::RegistrationsController:Class
+Did you mean?  before_action):
+  
+app/controllers/users/registrations_controller.rb:3:in `<class:RegistrationsController>'
+app/controllers/users/registrations_controller.rb:1:in `<main>'
+Started POST "/users" for ::1 at 2022-07-08 14:47:10 +0300
+  
+ActionController::RoutingError (undefined method `before_filter' for Users::RegistrationsController:Class
+Did you mean?  before_action):
+  
+app/controllers/users/registrations_controller.rb:3:in `<class:RegistrationsController>'
+app/controllers/users/registrations_controller.rb:1:in `<main>'
+Started POST "/users" for ::1 at 2022-07-08 14:49:50 +0300
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"email"=>"56789@email.com", "password"=>"[FILTERED]", "name"=>"pspdpdpdd", "phone_number"=>"5377689504"}, "registration"=>{"user"=>{"email"=>"56789@email.com", "password"=>"[FILTERED]", "name"=>"pspdpdpdd", "phone_number"=>"5377689504"}}}
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `for' for #<Devise::ParameterSanitizer:0x0000557e01e1dc80>):
+  
+app/controllers/users/registrations_controller.rb:8:in `configure_permitted_parameters'
+Started POST "/users" for ::1 at 2022-07-08 14:51:18 +0300
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"email"=>"56789@email.com", "password"=>"[FILTERED]", "name"=>"pspdpdpdd", "phone_number"=>"5377689504"}, "registration"=>{"user"=>{"email"=>"56789@email.com", "password"=>"[FILTERED]", "name"=>"pspdpdpdd", "phone_number"=>"5377689504"}}}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (1.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "phone_number") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "56789@email.com"], ["encrypted_password", "$2a$12$yL0jsKFtXjXgHRfbRwAvXOhB9OdZRHjtElXpaxpYIQmTYiEaxP1n2"], ["created_at", "2022-07-08 11:51:19.144618"], ["updated_at", "2022-07-08 11:51:19.144618"], ["name", "pspdpdpdd"], ["phone_number", "5377689504"]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[35m (7.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 520ms (Views: 0.6ms | ActiveRecord: 12.7ms)
+
+
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started POST "/users/sign_in" for ::1 at 2022-07-08 14:53:00 +0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by Users::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"56789@email.com", "password"=>"[FILTERED]", "name"=>"pspdpdpdd", "phone_number"=>"5377689504"}, "session"=>{"user"=>{"email"=>"56789@email.com", "password"=>"[FILTERED]", "name"=>"pspdpdpdd", "phone_number"=>"5377689504"}}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "5952c106-1256-4b5a-8647-1eb9ec6c6a31"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 108ms (Views: 0.4ms | ActiveRecord: 11.8ms)
+
+
+Started POST "/api/v1/posts" for ::1 at 2022-07-08 14:53:22 +0300
+Processing by Api::V1::PostsController#create as JSON
+  Parameters: {"api_v1_post"=>{"title"=>"Lorem", "content"=>"Lorem ipsum dolor"}, "post"=>{}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "f9c15657-39eb-4594-86ce-f09f0f3f0f83"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/posts_controller.rb:22
+  [1m[36mApi::V1::Post Create (2.5ms)[0m  [1m[32mINSERT INTO "api_v1_posts" ("title", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Lorem"], ["content", "Lorem ipsum dolor"], ["created_at", "2022-07-08 11:53:23.109214"], ["updated_at", "2022-07-08 11:53:23.109214"]]
+  ↳ app/controllers/api/v1/posts_controller.rb:22
+  [1m[35m (5.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/posts_controller.rb:22
+Completed 201 Created in 129ms (Views: 2.8ms | ActiveRecord: 15.4ms)
+
+
+Started GET "/api/v1/posts" for ::1 at 2022-07-08 14:53:34 +0300
+Processing by Api::V1::PostsController#index as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "f9c15657-39eb-4594-86ce-f09f0f3f0f83"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mApi::V1::Post Load (0.6ms)[0m  [1m[34mSELECT "api_v1_posts".* FROM "api_v1_posts"[0m
+  ↳ app/controllers/api/v1/posts_controller.rb:10
+Completed 200 OK in 18ms (Views: 5.1ms | ActiveRecord: 1.6ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-07-08 14:53:47 +0300
+Processing by Users::SessionsController#destroy as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users/sessions_controller.rb:10
+  [1m[36mJwtDenylist Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "f9c15657-39eb-4594-86ce-f09f0f3f0f83"], ["LIMIT", 1]]
+  ↳ app/controllers/users/sessions_controller.rb:10
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 200 OK in 10ms (Views: 0.4ms | ActiveRecord: 1.0ms)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+Migrating to Services (20220708121411)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20220708121411_services.rb:3
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "services" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT '' NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20220708121411_services.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220708121411"]]
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (7.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+Migrating to Services (20220708121411)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE "services"[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.5ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20220708121411"]]
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (5.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+Migrating to CreateServicesTable (20220708121411)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20220708121411_create_services_table.rb:3
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "services" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT '' NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20220708121411_create_services_table.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220708121411"]]
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (6.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+Migrating to CreateJoinTableSpecialistsServices (20220708125136)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20220708125136_create_join_table_specialists_services.rb:3
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "specialists_services" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "service_id" integer, "duration" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_1542edc40a"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_f60a1de393"
+FOREIGN KEY ("service_id")
+  REFERENCES "services" ("id")
+)[0m
+  ↳ db/migrate/20220708125136_create_join_table_specialists_services.rb:3
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX "index_specialists_services_on_user_id" ON "specialists_services" ("user_id")[0m
+  ↳ db/migrate/20220708125136_create_join_table_specialists_services.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE  INDEX "index_specialists_services_on_service_id" ON "specialists_services" ("service_id")[0m
+  ↳ db/migrate/20220708125136_create_join_table_specialists_services.rb:3
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_specialists_services_on_user_id_and_service_id" ON "specialists_services" ("user_id", "service_id")[0m
+  ↳ db/migrate/20220708125136_create_join_table_specialists_services.rb:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220708125136"]]
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (7.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+Migrating to CreateJoinTableClientsAppointments (20220708141727)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20220708141727_create_join_table_clients_appointments.rb:3
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "clients_appointments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "specialists_services_id" integer, "from" datetime DEFAULT CURRENT_TIMESTAMP NOT NULL, "to" datetime DEFAULT CURRENT_TIMESTAMP NOT NULL, "status" varchar DEFAULT '' NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_5f631caa04"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_568fcc5996"
+FOREIGN KEY ("specialists_services_id")
+  REFERENCES "specialists_services" ("id")
+)[0m
+  ↳ db/migrate/20220708141727_create_join_table_clients_appointments.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "index_clients_appointments_on_user_id" ON "clients_appointments" ("user_id")[0m
+  ↳ db/migrate/20220708141727_create_join_table_clients_appointments.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "index_clients_appointments_on_specialists_services_id" ON "clients_appointments" ("specialists_services_id")[0m
+  ↳ db/migrate/20220708141727_create_join_table_clients_appointments.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220708141727"]]
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[36mService Load (2.7ms)[0m  [1m[34mSELECT  "services".* FROM "services" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mService Create (3.8ms)[0m  [1m[32mINSERT INTO "services" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2022-07-08 15:45:56.655550"], ["updated_at", "2022-07-08 15:45:56.655550"]]
+  [1m[35m (6.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mService Create (1.0ms)[0m  [1m[32mINSERT INTO "services" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "gdhfj"], ["created_at", "2022-07-08 15:47:58.552236"], ["updated_at", "2022-07-08 15:47:58.552236"]]
+  [1m[35m (7.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mClientAppointment Load (1.1ms)[0m  [1m[34mSELECT  "client_appointments".* FROM "client_appointments" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+Migrating to CreateJoinTableClientsAppointments (20220708141727)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (1.9ms)[0m  [1m[35mDROP TABLE "clients_appointments"[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.7ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20220708141727"]]
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (10.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (4.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+Migrating to CreateJoinTableSpecialistsServices (20220708125136)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (1.0ms)[0m  [1m[35mDROP INDEX "index_specialists_services_on_user_id_and_service_id"[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (1.2ms)[0m  [1m[35mDROP TABLE "specialists_services"[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Destroy (4.7ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20220708125136"]]
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (6.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+Migrating to CreateJoinTableSpecialistsServices (20220708125136)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20220708125136_create_join_table_specialists_services.rb:3
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "specialist_services" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "service_id" integer, "duration" integer DEFAULT 0 NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_c8d1331732"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_ee3be8b69c"
+FOREIGN KEY ("service_id")
+  REFERENCES "services" ("id")
+)[0m
+  ↳ db/migrate/20220708125136_create_join_table_specialists_services.rb:3
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE  INDEX "index_specialist_services_on_user_id" ON "specialist_services" ("user_id")[0m
+  ↳ db/migrate/20220708125136_create_join_table_specialists_services.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE  INDEX "index_specialist_services_on_service_id" ON "specialist_services" ("service_id")[0m
+  ↳ db/migrate/20220708125136_create_join_table_specialists_services.rb:3
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_specialists_services_on_user_id_and_service_id" ON "specialists_services" ("user_id", "service_id")[0m
+  ↳ db/migrate/20220708125136_create_join_table_specialists_services.rb:9
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+Migrating to CreateJoinTableSpecialistsServices (20220708125136)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20220708125136_create_join_table_specialists_services.rb:3
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "specialist_services" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "service_id" integer, "duration" integer DEFAULT 0 NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_c8d1331732"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_ee3be8b69c"
+FOREIGN KEY ("service_id")
+  REFERENCES "services" ("id")
+)[0m
+  ↳ db/migrate/20220708125136_create_join_table_specialists_services.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE  INDEX "index_specialist_services_on_user_id" ON "specialist_services" ("user_id")[0m
+  ↳ db/migrate/20220708125136_create_join_table_specialists_services.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "index_specialist_services_on_service_id" ON "specialist_services" ("service_id")[0m
+  ↳ db/migrate/20220708125136_create_join_table_specialists_services.rb:3
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_specialists_services_on_user_id_and_service_id" ON "specialists_services" ("user_id", "service_id")[0m
+  ↳ db/migrate/20220708125136_create_join_table_specialists_services.rb:9
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+Migrating to CreateJoinTableSpecialistsServices (20220708125136)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20220708125136_create_join_table_specialists_services.rb:3
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "specialist_services" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "service_id" integer, "duration" integer DEFAULT 0 NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_c8d1331732"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_ee3be8b69c"
+FOREIGN KEY ("service_id")
+  REFERENCES "services" ("id")
+)[0m
+  ↳ db/migrate/20220708125136_create_join_table_specialists_services.rb:3
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE  INDEX "index_specialist_services_on_user_id" ON "specialist_services" ("user_id")[0m
+  ↳ db/migrate/20220708125136_create_join_table_specialists_services.rb:3
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE  INDEX "index_specialist_services_on_service_id" ON "specialist_services" ("service_id")[0m
+  ↳ db/migrate/20220708125136_create_join_table_specialists_services.rb:3
+  [1m[35m (8.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_specialist_services_on_user_id_and_service_id" ON "specialist_services" ("user_id", "service_id")[0m
+  ↳ db/migrate/20220708125136_create_join_table_specialists_services.rb:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220708125136"]]
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (5.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+Migrating to CreateJoinTableClientsAppointments (20220708141727)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "client_appointments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "specialist_services_id" integer, "from" datetime DEFAULT CURRENT_TIMESTAMP NOT NULL, "to" datetime DEFAULT CURRENT_TIMESTAMP NOT NULL, "status" varchar DEFAULT '' NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_894728cb20"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_ca2706b925"
+FOREIGN KEY ("specialist_services_id")
+  REFERENCES "specialist_services" ("id")
+)[0m
+  ↳ db/migrate/20220708141727_create_join_table_clients_appointments.rb:3
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX "index_client_appointments_on_user_id" ON "client_appointments" ("user_id")[0m
+  ↳ db/migrate/20220708141727_create_join_table_clients_appointments.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE  INDEX "index_client_appointments_on_specialist_services_id" ON "client_appointments" ("specialist_services_id")[0m
+  ↳ db/migrate/20220708141727_create_join_table_clients_appointments.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220708141727"]]
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (7.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[36mClientAppointment Load (1.9ms)[0m  [1m[34mSELECT  "client_appointments".* FROM "client_appointments" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mSpecialistService Load (0.4ms)[0m  [1m[34mSELECT  "specialist_services".* FROM "specialist_services" LIMIT ?[0m  [["LIMIT", 11]]
+Started POST "/users" for ::1 at 2022-07-08 20:16:12 +0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"email"=>"5674489@email.com", "password"=>"[FILTERED]", "name"=>"pspdpdpdd", "phone_number"=>"53776589504"}, "registration"=>{"user"=>{"email"=>"5674489@email.com", "password"=>"[FILTERED]", "name"=>"pspdpdpdd", "phone_number"=>"53776589504"}}}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "phone_number") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "5674489@email.com"], ["encrypted_password", "$2a$12$vC/SxMLuGc4imyjta1RpBeABXmD9VvHjQgZ5hyZmUDu10V01RZa.y"], ["created_at", "2022-07-08 17:16:13.517984"], ["updated_at", "2022-07-08 17:16:13.517984"], ["name", "pspdpdpdd"], ["phone_number", "53776589504"]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[35m (6.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 500ms (Views: 0.6ms | ActiveRecord: 14.2ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-07-08 20:17:24 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"5674489@email.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"5674489@email.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "3826b331-5c91-4d2e-8b44-90d131680aa3"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 19ms (Views: 0.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/api/v1/posts" for ::1 at 2022-07-08 20:18:10 +0300
+Processing by Api::V1::PostsController#index as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "af5251ec-572d-4ad4-93cb-0ad0a5b2ad2f"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mApi::V1::Post Load (0.6ms)[0m  [1m[34mSELECT "api_v1_posts".* FROM "api_v1_posts"[0m
+  ↳ app/controllers/api/v1/posts_controller.rb:10
+Completed 200 OK in 43ms (Views: 29.1ms | ActiveRecord: 3.4ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-07-08 20:18:55 +0300
+Processing by Users::SessionsController#destroy as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users/sessions_controller.rb:10
+  [1m[36mJwtDenylist Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "af5251ec-572d-4ad4-93cb-0ad0a5b2ad2f"], ["LIMIT", 1]]
+  ↳ app/controllers/users/sessions_controller.rb:10
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 200 OK in 14ms (Views: 0.4ms | ActiveRecord: 1.2ms)
+
+
