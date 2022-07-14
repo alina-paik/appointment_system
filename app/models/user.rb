@@ -8,4 +8,11 @@ class User < ApplicationRecord
          :jwt_authenticatable,
          :registerable,
          jwt_revocation_strategy: JwtDenylist
+
+  validates :name, :phone_number, presence: true
+  validates :phone_number, uniqueness: true,
+             numericality: true,
+             length: { in: 10..15 },
+             format: { with: /\d[0-9]\)*/, message:"only positive number without spaces are allowed" }
+  validates :name, length: { maximum: 20 }
 end

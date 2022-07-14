@@ -2083,3 +2083,118 @@ Filter chain halted as :verify_signed_out_user rendered or redirected
 Completed 200 OK in 14ms (Views: 0.4ms | ActiveRecord: 1.2ms)
 
 
+  [1m[36mUser Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."phone_number" = ? LIMIT ?[0m  [["phone_number", "380997918379"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."phone_number" = ? LIMIT ?[0m  [["phone_number", "3343457543343567"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."phone_number" = ? LIMIT ?[0m  [["phone_number", "380996918379"], ["LIMIT", 1]]
+Started GET "/users" for ::1 at 2022-07-14 17:25:32 +0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:26:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/sendfile.rb:110:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-cors-1.1.1/lib/rack/cors.rb:100:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/engine.rb:524:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/configuration.rb:227:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:706:in `handle_request'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:476:in `process_client'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:334:in `block in run'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/sign_in" for ::1 at 2022-07-14 17:26:15 +0300
+Processing by Users::SessionsController#new as */*
+Completed 200 OK in 75ms (Views: 0.5ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/users" for ::1 at 2022-07-14 17:26:51 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:26:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/sendfile.rb:110:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-cors-1.1.1/lib/rack/cors.rb:100:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/engine.rb:524:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/configuration.rb:227:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:706:in `handle_request'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:476:in `process_client'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:334:in `block in run'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started POST "/api/v1/posts" for ::1 at 2022-07-14 17:30:50 +0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::PostsController#create as JSON
+  Parameters: {"api_v1_post"=>{"title"=>"Lorem", "content"=>"Lorem ipsum dolor"}, "post"=>{}}
+Completed 401 Unauthorized in 10ms (ActiveRecord: 1.9ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-07-14 17:30:56 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"5674489@email.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"5674489@email.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "5674489@email.com"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 460ms (Views: 0.4ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/api/v1/posts" for ::1 at 2022-07-14 17:31:05 +0300
+Processing by Api::V1::PostsController#create as JSON
+  Parameters: {"api_v1_post"=>{"title"=>"Lorem", "content"=>"Lorem ipsum dolor"}, "post"=>{}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "466b284a-f873-4c66-905c-d0d033c31c8f"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/posts_controller.rb:25
+  [1m[36mApi::V1::Post Create (1.1ms)[0m  [1m[32mINSERT INTO "api_v1_posts" ("title", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Lorem"], ["content", "Lorem ipsum dolor"], ["created_at", "2022-07-14 14:31:05.173063"], ["updated_at", "2022-07-14 14:31:05.173063"]]
+  ↳ app/controllers/api/v1/posts_controller.rb:25
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/posts_controller.rb:25
+Completed 201 Created in 55ms (Views: 2.6ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/api/v1/posts" for ::1 at 2022-07-14 17:31:29 +0300
+Processing by Api::V1::PostsController#index as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "466b284a-f873-4c66-905c-d0d033c31c8f"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mApi::V1::Post Load (0.6ms)[0m  [1m[34mSELECT "api_v1_posts".* FROM "api_v1_posts"[0m
+  ↳ app/controllers/api/v1/posts_controller.rb:13
+Completed 200 OK in 17ms (Views: 5.7ms | ActiveRecord: 1.4ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mService Create (1.0ms)[0m  [1m[32mINSERT INTO "services" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "asdf"], ["created_at", "2022-07-14 16:28:32.920715"], ["updated_at", "2022-07-14 16:28:32.920715"]]
+  [1m[35m (7.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSpecialistService Create (1.2ms)[0m  [1m[32mINSERT INTO "specialist_services" ("user_id", "service_id", "duration", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 1], ["service_id", 3], ["duration", 20], ["created_at", "2022-07-14 17:04:14.585214"], ["updated_at", "2022-07-14 17:04:14.585214"]]
+  [1m[35m (7.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClientAppointment Create (1.0ms)[0m  [1m[32mINSERT INTO "client_appointments" ("user_id", "specialist_services_id", "from", "to", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 1], ["specialist_services_id", 1], ["from", "2022-07-14 17:14:20.262091"], ["to", "2022-07-14 18:14:20.262094"], ["status", "pending"], ["created_at", "2022-07-14 17:14:20.288274"], ["updated_at", "2022-07-14 17:14:20.288274"]]
+  [1m[35m (6.6ms)[0m  [1m[36mcommit transaction[0m
