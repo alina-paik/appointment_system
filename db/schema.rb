@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -12,7 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20_220_708_141_727) do
+ActiveRecord::Schema.define(version: 2022_07_14_172908) do
+
   create_table "api_v1_posts", force: :cascade do |t|
     t.string "title"
     t.text "content"
@@ -42,6 +41,7 @@ ActiveRecord::Schema.define(version: 20_220_708_141_727) do
     t.string "name", default: "", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_services_on_name", unique: true
   end
 
   create_table "specialist_services", force: :cascade do |t|
@@ -51,7 +51,7 @@ ActiveRecord::Schema.define(version: 20_220_708_141_727) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["service_id"], name: "index_specialist_services_on_service_id"
-    t.index %w[user_id service_id], name: "index_specialist_services_on_user_id_and_service_id", unique: true
+    t.index ["user_id", "service_id"], name: "index_specialist_services_on_user_id_and_service_id", unique: true
     t.index ["user_id"], name: "index_specialist_services_on_user_id"
   end
 
@@ -69,4 +69,5 @@ ActiveRecord::Schema.define(version: 20_220_708_141_727) do
     t.index ["phone_number"], name: "unique_user_phone_number", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
+
 end
