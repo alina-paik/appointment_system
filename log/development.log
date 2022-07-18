@@ -2240,3 +2240,15 @@ Migrating to AddToServicesTable (20220714172908)
   ↳ bin/rails:11
   [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:11
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mClientAppointment Load (1.3ms)[0m  [1m[34mSELECT  "client_appointments".* FROM "client_appointments" WHERE "client_appointments"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 11]]
+  [1m[36mSpecialistService Load (1.9ms)[0m  [1m[34mSELECT  "specialist_services".* FROM "specialist_services" WHERE "specialist_services"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 11]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mService Load (2.8ms)[0m  [1m[34mSELECT  "services".* FROM "services" INNER JOIN "specialist_services" ON "services"."id" = "specialist_services"."service_id" WHERE "specialist_services"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 11]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mSpecialistService Load (1.1ms)[0m  [1m[34mSELECT  "specialist_services".* FROM "specialist_services" INNER JOIN "client_appointments" ON "specialist_services"."id" = "client_appointments"."specialist_service_id" WHERE "client_appointments"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 11]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mSpecialistService Load (1.1ms)[0m  [1m[34mSELECT  "specialist_services".* FROM "specialist_services" INNER JOIN "client_appointments" ON "specialist_services"."id" = "client_appointments"."specialist_service_id" WHERE "client_appointments"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 11]]

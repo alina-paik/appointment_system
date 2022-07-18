@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 class User < ApplicationRecord
+  has_many :client_appointments
+  # has_many :client_specialist_services, through: :client_appointments, source: :specialist_service, class_name: "SpecialistService"
+  has_many :specialist_services
+  has_many :services,  through: :specialist_services
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable,
