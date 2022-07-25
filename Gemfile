@@ -13,6 +13,7 @@ gem "rubocop-rails"
 gem "rubocop-minitest"
 gem "rubocop-packaging"
 gem "rubocop-performance"
+gem 'thor', '~> 0.20.3'
 
 
 

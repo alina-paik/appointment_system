@@ -2252,3 +2252,1360 @@ Migrating to AddToServicesTable (20220714172908)
   [1m[36mSpecialistService Load (1.1ms)[0m  [1m[34mSELECT  "specialist_services".* FROM "specialist_services" INNER JOIN "client_appointments" ON "specialist_services"."id" = "client_appointments"."specialist_service_id" WHERE "client_appointments"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 11]]
   [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
   [1m[36mSpecialistService Load (1.1ms)[0m  [1m[34mSELECT  "specialist_services".* FROM "specialist_services" INNER JOIN "client_appointments" ON "specialist_services"."id" = "client_appointments"."specialist_service_id" WHERE "client_appointments"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 11]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+Migrating to DropApiV1Posts (20220718105405)
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (1.7ms)[0m  [1m[35mDROP TABLE "api_v1_posts"[0m
+  ↳ db/migrate/20220718105405_drop_api_v1_posts.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220718105405"]]
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (7.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+Started GET "/users/profile" for ::1 at 2022-07-19 22:19:44 +0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (uninitialized constant Users::UsersController):
+  
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/inflector/methods.rb:298:in `const_get'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/inflector/methods.rb:298:in `block in constantize'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/inflector/methods.rb:281:in `each'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/inflector/methods.rb:281:in `inject'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/inflector/methods.rb:281:in `constantize'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/http/request.rb:81:in `controller_class'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/routing/route_set.rb:46:in `controller'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/routing/route_set.rb:32:in `serve'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/journey/router.rb:52:in `block in serve'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/journey/router.rb:35:in `each'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/journey/router.rb:35:in `serve'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/routing/route_set.rb:840:in `call'
+vendor/bundle/ruby/2.7.0/gems/warden-jwt_auth-0.5.0/lib/warden/jwt_auth/middleware/token_dispatcher.rb:20:in `call'
+vendor/bundle/ruby/2.7.0/gems/warden-jwt_auth-0.5.0/lib/warden/jwt_auth/middleware/revocation_manager.rb:21:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/builder.rb:244:in `call'
+vendor/bundle/ruby/2.7.0/gems/warden-jwt_auth-0.5.0/lib/warden/jwt_auth/middleware.rb:23:in `call'
+vendor/bundle/ruby/2.7.0/gems/devise-jwt-cookie-0.3.0/lib/devise/jwt/cookie/middleware.rb:15:in `call'
+vendor/bundle/ruby/2.7.0/gems/warden-1.2.9/lib/warden/manager.rb:36:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/warden-1.2.9/lib/warden/manager.rb:34:in `catch'
+vendor/bundle/ruby/2.7.0/gems/warden-1.2.9/lib/warden/manager.rb:34:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/etag.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/conditional_get.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/head.rb:12:in `call'
+vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/migration.rb:559:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/callbacks.rb:98:in `run_callbacks'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:26:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/sendfile.rb:110:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-cors-1.1.1/lib/rack/cors.rb:100:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/engine.rb:524:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/configuration.rb:227:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:706:in `handle_request'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:476:in `process_client'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:334:in `block in run'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/profile" for ::1 at 2022-07-19 22:20:51 +0300
+Processing by UsersController#profile as */*
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/profile" for ::1 at 2022-07-19 22:25:30 +0300
+Processing by UsersController#profile as */*
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/users/profile" for ::1 at 2022-07-20 11:41:37 +0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#profile as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ (byebug):1
+  [1m[36mJwtDenylist Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "466b284a-f873-4c66-905c-d0d033c31c8f"], ["LIMIT", 1]]
+  ↳ (byebug):1
+Completed 200 OK in 194406ms (Views: 1.6ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/users/profile" for ::1 at 2022-07-20 11:45:03 +0300
+Processing by UsersController#profile as */*
+Started GET "/users/profile" for ::1 at 2022-07-20 11:45:32 +0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#profile as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ (byebug):1
+  [1m[36mJwtDenylist Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "466b284a-f873-4c66-905c-d0d033c31c8f"], ["LIMIT", 1]]
+  ↳ (byebug):1
+Completed 200 OK in 5960ms (Views: 1.2ms | ActiveRecord: 5.6ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-07-20 11:45:44 +0300
+Processing by Users::SessionsController#destroy as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users/sessions_controller.rb:13
+  [1m[36mJwtDenylist Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "466b284a-f873-4c66-905c-d0d033c31c8f"], ["LIMIT", 1]]
+  ↳ app/controllers/users/sessions_controller.rb:13
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 200 OK in 9ms (Views: 0.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/profile" for ::1 at 2022-07-20 11:45:48 +0300
+Processing by UsersController#profile as */*
+Completed 200 OK in 27688ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-07-20 11:49:22 +0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by Users::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"5674489@email.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"5674489@email.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "5674489@email.com"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 416ms (Views: 0.4ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/users/profile" for ::1 at 2022-07-20 11:49:28 +0300
+Processing by UsersController#profile as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (2.4ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "33003506-a509-4043-841a-53cbcb314d16"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Completed 204 No Content in 17523ms (ActiveRecord: 5.4ms)
+
+
+Started GET "/users/profile" for ::1 at 2022-07-20 11:50:31 +0300
+Processing by UsersController#profile as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "33003506-a509-4043-841a-53cbcb314d16"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 29806ms (Views: 2.6ms | ActiveRecord: 5.8ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-07-20 11:53:03 +0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by Users::SessionsController#destroy as */*
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users/sessions_controller.rb:13
+  [1m[36mJwtDenylist Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "33003506-a509-4043-841a-53cbcb314d16"], ["LIMIT", 1]]
+  ↳ app/controllers/users/sessions_controller.rb:13
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 200 OK in 55ms (Views: 0.5ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/users/profile" for ::1 at 2022-07-20 11:53:07 +0300
+Processing by UsersController#profile as */*
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-07-20 11:53:07 +0300
+Processing by Users::SessionsController#new as */*
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mSpecialistService Load (1.4ms)[0m  [1m[34mSELECT  "specialist_services".* FROM "specialist_services" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mService Load (0.4ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mSpecialistService Create (1.8ms)[0m  [1m[32mINSERT INTO "specialist_services" ("user_id", "service_id", "duration", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 3], ["service_id", 3], ["duration", 15], ["created_at", "2022-07-20 09:10:55.128485"], ["updated_at", "2022-07-20 09:10:55.128485"]]
+  [1m[35m (8.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mSpecialistService Load (0.3ms)[0m  [1m[34mSELECT  "specialist_services".* FROM "specialist_services" LIMIT ?[0m  [["LIMIT", 11]]
+Started POST "/users/sign_in" for ::1 at 2022-07-20 12:14:43 +0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by Users::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"5674489@email.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"5674489@email.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "5674489@email.com"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 392ms (Views: 0.4ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/users/my_services" for ::1 at 2022-07-20 12:14:50 +0300
+  
+AbstractController::ActionNotFound (The action 'my_services' could not be found for UsersController):
+  
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/abstract_controller/base.rb:129:in `process'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_controller/metal.rb:191:in `dispatch'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_controller/metal.rb:252:in `dispatch'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/routing/route_set.rb:34:in `serve'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/journey/router.rb:52:in `block in serve'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/journey/router.rb:35:in `each'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/journey/router.rb:35:in `serve'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/routing/route_set.rb:840:in `call'
+vendor/bundle/ruby/2.7.0/gems/warden-jwt_auth-0.5.0/lib/warden/jwt_auth/middleware/token_dispatcher.rb:20:in `call'
+vendor/bundle/ruby/2.7.0/gems/warden-jwt_auth-0.5.0/lib/warden/jwt_auth/middleware/revocation_manager.rb:21:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/builder.rb:244:in `call'
+vendor/bundle/ruby/2.7.0/gems/warden-jwt_auth-0.5.0/lib/warden/jwt_auth/middleware.rb:23:in `call'
+vendor/bundle/ruby/2.7.0/gems/devise-jwt-cookie-0.3.0/lib/devise/jwt/cookie/middleware.rb:15:in `call'
+vendor/bundle/ruby/2.7.0/gems/warden-1.2.9/lib/warden/manager.rb:36:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/warden-1.2.9/lib/warden/manager.rb:34:in `catch'
+vendor/bundle/ruby/2.7.0/gems/warden-1.2.9/lib/warden/manager.rb:34:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/etag.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/conditional_get.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/head.rb:12:in `call'
+vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/migration.rb:559:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/callbacks.rb:98:in `run_callbacks'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:26:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/sendfile.rb:110:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-cors-1.1.1/lib/rack/cors.rb:100:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/engine.rb:524:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/configuration.rb:227:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:706:in `handle_request'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:476:in `process_client'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:334:in `block in run'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/my_services" for ::1 at 2022-07-20 12:18:09 +0300
+  
+AbstractController::ActionNotFound (The action 'my_services' could not be found for UsersController):
+  
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/abstract_controller/base.rb:129:in `process'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_controller/metal.rb:191:in `dispatch'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_controller/metal.rb:252:in `dispatch'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/routing/route_set.rb:34:in `serve'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/journey/router.rb:52:in `block in serve'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/journey/router.rb:35:in `each'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/journey/router.rb:35:in `serve'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/routing/route_set.rb:840:in `call'
+vendor/bundle/ruby/2.7.0/gems/warden-jwt_auth-0.5.0/lib/warden/jwt_auth/middleware/token_dispatcher.rb:20:in `call'
+vendor/bundle/ruby/2.7.0/gems/warden-jwt_auth-0.5.0/lib/warden/jwt_auth/middleware/revocation_manager.rb:21:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/builder.rb:244:in `call'
+vendor/bundle/ruby/2.7.0/gems/warden-jwt_auth-0.5.0/lib/warden/jwt_auth/middleware.rb:23:in `call'
+vendor/bundle/ruby/2.7.0/gems/devise-jwt-cookie-0.3.0/lib/devise/jwt/cookie/middleware.rb:15:in `call'
+vendor/bundle/ruby/2.7.0/gems/warden-1.2.9/lib/warden/manager.rb:36:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/warden-1.2.9/lib/warden/manager.rb:34:in `catch'
+vendor/bundle/ruby/2.7.0/gems/warden-1.2.9/lib/warden/manager.rb:34:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/etag.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/conditional_get.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/head.rb:12:in `call'
+vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/migration.rb:559:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/callbacks.rb:98:in `run_callbacks'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:26:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/sendfile.rb:110:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-cors-1.1.1/lib/rack/cors.rb:100:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/engine.rb:524:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/configuration.rb:227:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:706:in `handle_request'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:476:in `process_client'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:334:in `block in run'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/services" for ::1 at 2022-07-20 12:19:10 +0300
+  
+AbstractController::ActionNotFound (The action 'services' could not be found for UsersController):
+  
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/abstract_controller/base.rb:129:in `process'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_controller/metal.rb:191:in `dispatch'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_controller/metal.rb:252:in `dispatch'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/routing/route_set.rb:34:in `serve'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/journey/router.rb:52:in `block in serve'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/journey/router.rb:35:in `each'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/journey/router.rb:35:in `serve'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/routing/route_set.rb:840:in `call'
+vendor/bundle/ruby/2.7.0/gems/warden-jwt_auth-0.5.0/lib/warden/jwt_auth/middleware/token_dispatcher.rb:20:in `call'
+vendor/bundle/ruby/2.7.0/gems/warden-jwt_auth-0.5.0/lib/warden/jwt_auth/middleware/revocation_manager.rb:21:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/builder.rb:244:in `call'
+vendor/bundle/ruby/2.7.0/gems/warden-jwt_auth-0.5.0/lib/warden/jwt_auth/middleware.rb:23:in `call'
+vendor/bundle/ruby/2.7.0/gems/devise-jwt-cookie-0.3.0/lib/devise/jwt/cookie/middleware.rb:15:in `call'
+vendor/bundle/ruby/2.7.0/gems/warden-1.2.9/lib/warden/manager.rb:36:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/warden-1.2.9/lib/warden/manager.rb:34:in `catch'
+vendor/bundle/ruby/2.7.0/gems/warden-1.2.9/lib/warden/manager.rb:34:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/etag.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/conditional_get.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/head.rb:12:in `call'
+vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/migration.rb:559:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/callbacks.rb:98:in `run_callbacks'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:26:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/sendfile.rb:110:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-cors-1.1.1/lib/rack/cors.rb:100:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/engine.rb:524:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/configuration.rb:227:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:706:in `handle_request'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:476:in `process_client'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:334:in `block in run'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/services" for ::1 at 2022-07-20 12:19:56 +0300
+  
+AbstractController::ActionNotFound (The action 'services' could not be found for UsersController):
+  
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/abstract_controller/base.rb:129:in `process'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_controller/metal.rb:191:in `dispatch'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_controller/metal.rb:252:in `dispatch'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/routing/route_set.rb:34:in `serve'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/journey/router.rb:52:in `block in serve'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/journey/router.rb:35:in `each'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/journey/router.rb:35:in `serve'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/routing/route_set.rb:840:in `call'
+vendor/bundle/ruby/2.7.0/gems/warden-jwt_auth-0.5.0/lib/warden/jwt_auth/middleware/token_dispatcher.rb:20:in `call'
+vendor/bundle/ruby/2.7.0/gems/warden-jwt_auth-0.5.0/lib/warden/jwt_auth/middleware/revocation_manager.rb:21:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/builder.rb:244:in `call'
+vendor/bundle/ruby/2.7.0/gems/warden-jwt_auth-0.5.0/lib/warden/jwt_auth/middleware.rb:23:in `call'
+vendor/bundle/ruby/2.7.0/gems/devise-jwt-cookie-0.3.0/lib/devise/jwt/cookie/middleware.rb:15:in `call'
+vendor/bundle/ruby/2.7.0/gems/warden-1.2.9/lib/warden/manager.rb:36:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/warden-1.2.9/lib/warden/manager.rb:34:in `catch'
+vendor/bundle/ruby/2.7.0/gems/warden-1.2.9/lib/warden/manager.rb:34:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/etag.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/conditional_get.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/head.rb:12:in `call'
+vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/migration.rb:559:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/callbacks.rb:98:in `run_callbacks'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:26:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/sendfile.rb:110:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-cors-1.1.1/lib/rack/cors.rb:100:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/engine.rb:524:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/configuration.rb:227:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:706:in `handle_request'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:476:in `process_client'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:334:in `block in run'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[36mSpecialistService Load (1.1ms)[0m  [1m[34mSELECT  "specialist_services".* FROM "specialist_services" WHERE "specialist_services"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 11]]
+Started GET "/users/services" for ::1 at 2022-07-20 13:34:05 +0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/users/services"):
+  
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:26:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/sendfile.rb:110:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-cors-1.1.1/lib/rack/cors.rb:100:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/engine.rb:524:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/configuration.rb:227:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:706:in `handle_request'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:476:in `process_client'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:334:in `block in run'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/specialists//services" for ::1 at 2022-07-20 13:34:30 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/specialists/services"):
+  
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:26:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/sendfile.rb:110:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-cors-1.1.1/lib/rack/cors.rb:100:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/engine.rb:524:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/configuration.rb:227:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:706:in `handle_request'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:476:in `process_client'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:334:in `block in run'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/specialists/3/services" for ::1 at 2022-07-20 13:34:49 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/specialists/3/services"):
+  
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:26:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/sendfile.rb:110:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-cors-1.1.1/lib/rack/cors.rb:100:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/engine.rb:524:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/configuration.rb:227:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:706:in `handle_request'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:476:in `process_client'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:334:in `block in run'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/specialists//services" for ::1 at 2022-07-20 13:35:02 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/specialists/services"):
+  
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:26:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/sendfile.rb:110:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-cors-1.1.1/lib/rack/cors.rb:100:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/engine.rb:524:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/configuration.rb:227:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:706:in `handle_request'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:476:in `process_client'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:334:in `block in run'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/specialists//services" for ::1 at 2022-07-20 13:36:23 +0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/users/specialists/services"):
+  
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:26:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/sendfile.rb:110:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-cors-1.1.1/lib/rack/cors.rb:100:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/engine.rb:524:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/configuration.rb:227:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:706:in `handle_request'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:476:in `process_client'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:334:in `block in run'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/specialists//services" for ::1 at 2022-07-20 13:37:37 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/specialists/services"):
+  
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:26:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/sendfile.rb:110:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-cors-1.1.1/lib/rack/cors.rb:100:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/engine.rb:524:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/configuration.rb:227:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:706:in `handle_request'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:476:in `process_client'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:334:in `block in run'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/specialists//services" for ::1 at 2022-07-20 13:38:55 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/specialists/services"):
+  
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:26:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/sendfile.rb:110:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-cors-1.1.1/lib/rack/cors.rb:100:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/engine.rb:524:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/configuration.rb:227:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:706:in `handle_request'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:476:in `process_client'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:334:in `block in run'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/specialists//services" for ::1 at 2022-07-20 13:42:26 +0300
+  
+SyntaxError (/home/dmitriy/work/appointment_system/app/controllers/specialists/services_controller.rb:9: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/specialists/services_controller.rb:9: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/specialists//services" for ::1 at 2022-07-20 13:43:01 +0300
+  
+SyntaxError (/home/dmitriy/work/appointment_system/app/controllers/specialists/services_controller.rb:10: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/specialists/services_controller.rb:10: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/specialists//services" for ::1 at 2022-07-20 13:43:30 +0300
+Processing by Specialists::ServicesController#index as JSON
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "a9972e66-bc97-439e-9234-f7f6f316f91e"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpecialistService Load (1.2ms)[0m  [1m[34mSELECT "specialist_services".* FROM "specialist_services" WHERE "specialist_services"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/specialists/services_controller.rb:8
+Completed 200 OK in 92ms (Views: 23.7ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/specialists//services" for ::1 at 2022-07-20 13:44:38 +0300
+Processing by Specialists::ServicesController#index as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "a9972e66-bc97-439e-9234-f7f6f316f91e"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpecialistService Load (0.7ms)[0m  [1m[34mSELECT "specialist_services".* FROM "specialist_services" WHERE "specialist_services"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/specialists/services_controller.rb:8
+Completed 200 OK in 96ms (Views: 22.9ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/specialists/services" for ::1 at 2022-07-20 14:01:08 +0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by Specialists::ServicesController#index as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "a9972e66-bc97-439e-9234-f7f6f316f91e"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpecialistService Load (0.7ms)[0m  [1m[34mSELECT "specialist_services".* FROM "specialist_services" WHERE "specialist_services"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/specialists/services_controller.rb:8
+Completed 200 OK in 104ms (Views: 27.0ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/specialists/2/services" for ::1 at 2022-07-20 14:01:49 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/specialists/2/services"):
+  
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:26:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/sendfile.rb:110:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-cors-1.1.1/lib/rack/cors.rb:100:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/engine.rb:524:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/configuration.rb:227:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:706:in `handle_request'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:476:in `process_client'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:334:in `block in run'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/specialists/3/services" for ::1 at 2022-07-20 14:02:02 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/specialists/3/services"):
+  
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:26:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/sendfile.rb:110:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-cors-1.1.1/lib/rack/cors.rb:100:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/engine.rb:524:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/configuration.rb:227:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:706:in `handle_request'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:476:in `process_client'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:334:in `block in run'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/specialists//services" for ::1 at 2022-07-20 14:02:12 +0300
+Processing by Specialists::ServicesController#index as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "a9972e66-bc97-439e-9234-f7f6f316f91e"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpecialistService Load (0.4ms)[0m  [1m[34mSELECT "specialist_services".* FROM "specialist_services" WHERE "specialist_services"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/specialists/services_controller.rb:8
+Completed 200 OK in 12ms (Views: 2.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/specialists//services" for ::1 at 2022-07-20 14:04:12 +0300
+  
+ActionController::RoutingError (uninitialized constant SpecialistsController):
+  
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/inflector/methods.rb:283:in `const_get'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/inflector/methods.rb:283:in `block in constantize'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/inflector/methods.rb:281:in `each'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/inflector/methods.rb:281:in `inject'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/inflector/methods.rb:281:in `constantize'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/http/request.rb:81:in `controller_class'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/routing/route_set.rb:46:in `controller'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/routing/route_set.rb:32:in `serve'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/journey/router.rb:52:in `block in serve'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/journey/router.rb:35:in `each'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/journey/router.rb:35:in `serve'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/routing/route_set.rb:840:in `call'
+vendor/bundle/ruby/2.7.0/gems/warden-jwt_auth-0.5.0/lib/warden/jwt_auth/middleware/token_dispatcher.rb:20:in `call'
+vendor/bundle/ruby/2.7.0/gems/warden-jwt_auth-0.5.0/lib/warden/jwt_auth/middleware/revocation_manager.rb:21:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/builder.rb:244:in `call'
+vendor/bundle/ruby/2.7.0/gems/warden-jwt_auth-0.5.0/lib/warden/jwt_auth/middleware.rb:23:in `call'
+vendor/bundle/ruby/2.7.0/gems/devise-jwt-cookie-0.3.0/lib/devise/jwt/cookie/middleware.rb:15:in `call'
+vendor/bundle/ruby/2.7.0/gems/warden-1.2.9/lib/warden/manager.rb:36:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/warden-1.2.9/lib/warden/manager.rb:34:in `catch'
+vendor/bundle/ruby/2.7.0/gems/warden-1.2.9/lib/warden/manager.rb:34:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/etag.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/conditional_get.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/head.rb:12:in `call'
+vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/migration.rb:559:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/callbacks.rb:98:in `run_callbacks'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:26:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/sendfile.rb:110:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-cors-1.1.1/lib/rack/cors.rb:100:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/engine.rb:524:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/configuration.rb:227:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:706:in `handle_request'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:476:in `process_client'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:334:in `block in run'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/specialists/3/services" for ::1 at 2022-07-20 14:04:27 +0300
+  
+ActionController::RoutingError (uninitialized constant ServicesController):
+  
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/inflector/methods.rb:283:in `const_get'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/inflector/methods.rb:283:in `block in constantize'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/inflector/methods.rb:281:in `each'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/inflector/methods.rb:281:in `inject'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/inflector/methods.rb:281:in `constantize'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/http/request.rb:81:in `controller_class'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/routing/route_set.rb:46:in `controller'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/routing/route_set.rb:32:in `serve'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/journey/router.rb:52:in `block in serve'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/journey/router.rb:35:in `each'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/journey/router.rb:35:in `serve'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/routing/route_set.rb:840:in `call'
+vendor/bundle/ruby/2.7.0/gems/warden-jwt_auth-0.5.0/lib/warden/jwt_auth/middleware/token_dispatcher.rb:20:in `call'
+vendor/bundle/ruby/2.7.0/gems/warden-jwt_auth-0.5.0/lib/warden/jwt_auth/middleware/revocation_manager.rb:21:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/builder.rb:244:in `call'
+vendor/bundle/ruby/2.7.0/gems/warden-jwt_auth-0.5.0/lib/warden/jwt_auth/middleware.rb:23:in `call'
+vendor/bundle/ruby/2.7.0/gems/devise-jwt-cookie-0.3.0/lib/devise/jwt/cookie/middleware.rb:15:in `call'
+vendor/bundle/ruby/2.7.0/gems/warden-1.2.9/lib/warden/manager.rb:36:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/warden-1.2.9/lib/warden/manager.rb:34:in `catch'
+vendor/bundle/ruby/2.7.0/gems/warden-1.2.9/lib/warden/manager.rb:34:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/etag.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/conditional_get.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/head.rb:12:in `call'
+vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/migration.rb:559:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/callbacks.rb:98:in `run_callbacks'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:26:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/sendfile.rb:110:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-cors-1.1.1/lib/rack/cors.rb:100:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/engine.rb:524:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/configuration.rb:227:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:706:in `handle_request'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:476:in `process_client'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:334:in `block in run'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/specialist_services" for ::1 at 2022-07-20 14:10:43 +0300
+  
+ActionController::RoutingError (uninitialized constant SpecialistServicesController):
+  
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/inflector/methods.rb:283:in `const_get'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/inflector/methods.rb:283:in `block in constantize'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/inflector/methods.rb:281:in `each'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/inflector/methods.rb:281:in `inject'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/inflector/methods.rb:281:in `constantize'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/http/request.rb:81:in `controller_class'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/routing/route_set.rb:46:in `controller'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/routing/route_set.rb:32:in `serve'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/journey/router.rb:52:in `block in serve'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/journey/router.rb:35:in `each'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/journey/router.rb:35:in `serve'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/routing/route_set.rb:840:in `call'
+vendor/bundle/ruby/2.7.0/gems/warden-jwt_auth-0.5.0/lib/warden/jwt_auth/middleware/token_dispatcher.rb:20:in `call'
+vendor/bundle/ruby/2.7.0/gems/warden-jwt_auth-0.5.0/lib/warden/jwt_auth/middleware/revocation_manager.rb:21:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/builder.rb:244:in `call'
+vendor/bundle/ruby/2.7.0/gems/warden-jwt_auth-0.5.0/lib/warden/jwt_auth/middleware.rb:23:in `call'
+vendor/bundle/ruby/2.7.0/gems/devise-jwt-cookie-0.3.0/lib/devise/jwt/cookie/middleware.rb:15:in `call'
+vendor/bundle/ruby/2.7.0/gems/warden-1.2.9/lib/warden/manager.rb:36:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/warden-1.2.9/lib/warden/manager.rb:34:in `catch'
+vendor/bundle/ruby/2.7.0/gems/warden-1.2.9/lib/warden/manager.rb:34:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/etag.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/conditional_get.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/head.rb:12:in `call'
+vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/migration.rb:559:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/callbacks.rb:98:in `run_callbacks'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:26:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/sendfile.rb:110:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-cors-1.1.1/lib/rack/cors.rb:100:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/engine.rb:524:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/configuration.rb:227:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:706:in `handle_request'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:476:in `process_client'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:334:in `block in run'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/specialist_services" for ::1 at 2022-07-20 14:11:14 +0300
+Processing by SpecialistServicesController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "a9972e66-bc97-439e-9234-f7f6f316f91e"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpecialistService Load (1.0ms)[0m  [1m[34mSELECT "specialist_services".* FROM "specialist_services" WHERE "specialist_services"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/specialist_services_controller.rb:6
+Completed 200 OK in 91ms (Views: 21.6ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/specialist_services/1" for ::1 at 2022-07-20 14:11:20 +0300
+Processing by SpecialistServicesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "a9972e66-bc97-439e-9234-f7f6f316f91e"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Completed 204 No Content in 11ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/specialist_services" for ::1 at 2022-07-20 14:11:25 +0300
+Processing by SpecialistServicesController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "a9972e66-bc97-439e-9234-f7f6f316f91e"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpecialistService Load (0.4ms)[0m  [1m[34mSELECT "specialist_services".* FROM "specialist_services" WHERE "specialist_services"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/specialist_services_controller.rb:6
+Completed 200 OK in 11ms (Views: 3.4ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-07-22 14:59:31 +0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by Users::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"5674489@email.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"5674489@email.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "a9972e66-bc97-439e-9234-f7f6f316f91e"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 56ms (Views: 0.6ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/specialist_services/1" for ::1 at 2022-07-22 14:59:44 +0300
+  
+SyntaxError (/home/dmitriy/work/appointment_system/app/controllers/specialist_services_controller.rb:45: syntax error, unexpected [, expecting `do' or '{' or '('
+...istService.find_by(id: params [:id], )
+...                              ^
+/home/dmitriy/work/appointment_system/app/controllers/specialist_services_controller.rb:45: syntax error, unexpected ',', expecting `end'
+...rvice.find_by(id: params [:id], )
+...                              ^
+/home/dmitriy/work/appointment_system/app/controllers/specialist_services_controller.rb:55: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/specialist_services_controller.rb:45: syntax error, unexpected [, expecting `do' or '{' or '('
+app/controllers/specialist_services_controller.rb:45: syntax error, unexpected ',', expecting `end'
+app/controllers/specialist_services_controller.rb:55: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/specialist_services/1" for ::1 at 2022-07-22 15:02:14 +0300
+Processing by SpecialistServicesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "69895a30-30d7-419f-ad75-7515e9242bb0"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpecialistService Load (0.8ms)[0m  [1m[34mSELECT  "specialist_services".* FROM "specialist_services" WHERE "specialist_services"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/specialist_services_controller.rb:43
+Completed 200 OK in 129ms (Views: 1.3ms | ActiveRecord: 14.4ms)
+
+
+Started GET "/specialist_services/1" for ::1 at 2022-07-22 15:02:38 +0300
+Processing by SpecialistServicesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "69895a30-30d7-419f-ad75-7515e9242bb0"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpecialistService Load (0.6ms)[0m  [1m[34mSELECT  "specialist_services".* FROM "specialist_services" WHERE "specialist_services"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/specialist_services_controller.rb:44
+Completed 200 OK in 308322ms (Views: 1.7ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/specialist_services/1" for ::1 at 2022-07-22 15:09:54 +0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by SpecialistServicesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "69895a30-30d7-419f-ad75-7515e9242bb0"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpecialistService Load (0.6ms)[0m  [1m[34mSELECT  "specialist_services".* FROM "specialist_services" WHERE "specialist_services"."id" = ? AND "specialist_services"."user_id" = ? LIMIT ?[0m  [["id", 1], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/specialist_services_controller.rb:44
+Completed 200 OK in 31602ms (Views: 0.5ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/specialist_services/1" for ::1 at 2022-07-22 15:10:59 +0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by SpecialistServicesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "69895a30-30d7-419f-ad75-7515e9242bb0"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpecialistService Load (0.6ms)[0m  [1m[34mSELECT  "specialist_services".* FROM "specialist_services" WHERE "specialist_services"."id" = ? AND "specialist_services"."user_id" = ? LIMIT ?[0m  [["id", 1], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/specialist_services_controller.rb:43
+Completed 200 OK in 82ms (Views: 0.6ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/specialist_services/2" for ::1 at 2022-07-22 15:11:09 +0300
+Processing by SpecialistServicesController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "69895a30-30d7-419f-ad75-7515e9242bb0"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpecialistService Load (0.4ms)[0m  [1m[34mSELECT  "specialist_services".* FROM "specialist_services" WHERE "specialist_services"."id" = ? AND "specialist_services"."user_id" = ? LIMIT ?[0m  [["id", 2], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/specialist_services_controller.rb:43
+Completed 200 OK in 32ms (Views: 1.5ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/specialist_services/1" for ::1 at 2022-07-22 16:34:55 +0300
+Processing by SpecialistServicesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "69895a30-30d7-419f-ad75-7515e9242bb0"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpecialistService Load (0.6ms)[0m  [1m[34mSELECT  "specialist_services".* FROM "specialist_services" WHERE "specialist_services"."id" = ? AND "specialist_services"."user_id" = ? LIMIT ?[0m  [["id", 1], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/specialist_services_controller.rb:43
+Completed 200 OK in 89ms (Views: 0.4ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/specialist_services/2" for ::1 at 2022-07-22 16:35:05 +0300
+Processing by SpecialistServicesController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "69895a30-30d7-419f-ad75-7515e9242bb0"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpecialistService Load (0.4ms)[0m  [1m[34mSELECT  "specialist_services".* FROM "specialist_services" WHERE "specialist_services"."id" = ? AND "specialist_services"."user_id" = ? LIMIT ?[0m  [["id", 2], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/specialist_services_controller.rb:43
+Completed 200 OK in 31ms (Views: 1.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/specialist_services/3" for ::1 at 2022-07-22 16:35:21 +0300
+Processing by SpecialistServicesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "69895a30-30d7-419f-ad75-7515e9242bb0"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpecialistService Load (0.3ms)[0m  [1m[34mSELECT  "specialist_services".* FROM "specialist_services" WHERE "specialist_services"."id" = ? AND "specialist_services"."user_id" = ? LIMIT ?[0m  [["id", 3], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/specialist_services_controller.rb:43
+Completed 200 OK in 10ms (Views: 0.7ms | ActiveRecord: 1.3ms)
+
+
+  [1m[36mSpecialistService Load (1.6ms)[0m  [1m[34mSELECT  "specialist_services".* FROM "specialist_services" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/specialist_services" for ::1 at 2022-07-22 17:02:48 +0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by SpecialistServicesController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "69895a30-30d7-419f-ad75-7515e9242bb0"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpecialistService Load (0.6ms)[0m  [1m[34mSELECT "specialist_services".* FROM "specialist_services" WHERE "specialist_services"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/specialist_services_controller.rb:8
+Completed 200 OK in 94ms (Views: 20.0ms | ActiveRecord: 7.8ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mService Load (0.4ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSpecialistService Create (2.7ms)[0m  [1m[32mINSERT INTO "specialist_services" ("user_id", "service_id", "duration", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 3], ["service_id", 1], ["duration", 23], ["created_at", "2022-07-22 14:05:06.657375"], ["updated_at", "2022-07-22 14:05:06.657375"]]
+  [1m[35m (6.8ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/specialist_services" for ::1 at 2022-07-22 17:05:26 +0300
+Processing by SpecialistServicesController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (2.5ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "69895a30-30d7-419f-ad75-7515e9242bb0"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpecialistService Load (0.4ms)[0m  [1m[34mSELECT "specialist_services".* FROM "specialist_services" WHERE "specialist_services"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/specialist_services_controller.rb:8
+Completed 200 OK in 15ms (Views: 3.9ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/specialist_services/3" for ::1 at 2022-07-22 17:06:27 +0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by SpecialistServicesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "69895a30-30d7-419f-ad75-7515e9242bb0"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpecialistService Load (0.7ms)[0m  [1m[34mSELECT  "specialist_services".* FROM "specialist_services" WHERE "specialist_services"."id" = ? AND "specialist_services"."user_id" = ? LIMIT ?[0m  [["id", 3], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/specialist_services_controller.rb:43
+Completed 200 OK in 100ms (Views: 1.6ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/specialist_services/2" for ::1 at 2022-07-22 17:06:36 +0300
+Processing by SpecialistServicesController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "69895a30-30d7-419f-ad75-7515e9242bb0"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpecialistService Load (0.6ms)[0m  [1m[34mSELECT  "specialist_services".* FROM "specialist_services" WHERE "specialist_services"."id" = ? AND "specialist_services"."user_id" = ? LIMIT ?[0m  [["id", 2], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/specialist_services_controller.rb:43
+Completed 200 OK in 12ms (Views: 1.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/specialist_services/1" for ::1 at 2022-07-22 17:06:43 +0300
+Processing by SpecialistServicesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "69895a30-30d7-419f-ad75-7515e9242bb0"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpecialistService Load (0.3ms)[0m  [1m[34mSELECT  "specialist_services".* FROM "specialist_services" WHERE "specialist_services"."id" = ? AND "specialist_services"."user_id" = ? LIMIT ?[0m  [["id", 1], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/specialist_services_controller.rb:43
+Completed 200 OK in 11ms (Views: 0.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/specialist_services/2" for ::1 at 2022-07-22 17:06:48 +0300
+Processing by SpecialistServicesController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "69895a30-30d7-419f-ad75-7515e9242bb0"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpecialistService Load (0.3ms)[0m  [1m[34mSELECT  "specialist_services".* FROM "specialist_services" WHERE "specialist_services"."id" = ? AND "specialist_services"."user_id" = ? LIMIT ?[0m  [["id", 2], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/specialist_services_controller.rb:43
+Completed 200 OK in 17ms (Views: 1.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/specialist_services/3" for ::1 at 2022-07-22 17:06:53 +0300
+Processing by SpecialistServicesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "69895a30-30d7-419f-ad75-7515e9242bb0"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpecialistService Load (0.4ms)[0m  [1m[34mSELECT  "specialist_services".* FROM "specialist_services" WHERE "specialist_services"."id" = ? AND "specialist_services"."user_id" = ? LIMIT ?[0m  [["id", 3], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/specialist_services_controller.rb:43
+Completed 200 OK in 11ms (Views: 1.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/specialist_services" for ::1 at 2022-07-22 17:06:59 +0300
+Processing by SpecialistServicesController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "69895a30-30d7-419f-ad75-7515e9242bb0"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpecialistService Load (0.6ms)[0m  [1m[34mSELECT "specialist_services".* FROM "specialist_services" WHERE "specialist_services"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/specialist_services_controller.rb:8
+Completed 200 OK in 12ms (Views: 3.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/specialist_services/3" for ::1 at 2022-07-22 17:07:58 +0300
+Processing by SpecialistServicesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "69895a30-30d7-419f-ad75-7515e9242bb0"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpecialistService Load (0.4ms)[0m  [1m[34mSELECT  "specialist_services".* FROM "specialist_services" WHERE "specialist_services"."id" = ? AND "specialist_services"."user_id" = ? LIMIT ?[0m  [["id", 3], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/specialist_services_controller.rb:43
+Completed 200 OK in 14ms (Views: 1.0ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/specialist_services" for ::1 at 2022-07-22 17:12:09 +0300
+Processing by SpecialistServicesController#create as */*
+  Parameters: {"specialist_service"=>{"service_id"=>1, "duration"=>23}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "69895a30-30d7-419f-ad75-7515e9242bb0"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/specialist_services_controller.rb:19
+  [1m[36mService Load (0.5ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/specialist_services_controller.rb:19
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/specialist_services_controller.rb:19
+Completed 422 Unprocessable Entity in 161ms (Views: 0.5ms | ActiveRecord: 12.4ms)
+
+
+Started POST "/specialist_services" for ::1 at 2022-07-22 17:14:13 +0300
+Processing by SpecialistServicesController#create as */*
+  Parameters: {"specialist_service"=>{"service_id"=>1, "duration"=>23}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "69895a30-30d7-419f-ad75-7515e9242bb0"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/specialist_services_controller.rb:19
+  [1m[36mService Load (0.4ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/specialist_services_controller.rb:19
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/specialist_services_controller.rb:19
+Completed 422 Unprocessable Entity in 94501ms (Views: 0.6ms | ActiveRecord: 9.6ms)
+
+
+Started POST "/specialist_services" for ::1 at 2022-07-22 17:17:05 +0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by SpecialistServicesController#create as */*
+  Parameters: {"specialist_service"=>{"service_id"=>1, "duration"=>23}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "69895a30-30d7-419f-ad75-7515e9242bb0"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/specialist_services_controller.rb:19
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/specialist_services_controller.rb:19
+  [1m[36mService Load (0.5ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/specialist_services_controller.rb:19
+  [1m[36mSpecialistService Create (1.2ms)[0m  [1m[32mINSERT INTO "specialist_services" ("user_id", "service_id", "duration", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 3], ["service_id", 1], ["duration", 23], ["created_at", "2022-07-22 14:17:05.364132"], ["updated_at", "2022-07-22 14:17:05.364132"]]
+  ↳ app/controllers/specialist_services_controller.rb:19
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/specialist_services_controller.rb:19
+Completed 500 Internal Server Error in 150ms (ActiveRecord: 11.5ms)
+
+
+  
+ActiveRecord::RecordNotUnique (SQLite3::ConstraintException: UNIQUE constraint failed: specialist_services.user_id, specialist_services.service_id: INSERT INTO "specialist_services" ("user_id", "service_id", "duration", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)):
+  
+app/controllers/specialist_services_controller.rb:19:in `create'
+Started POST "/specialist_services" for ::1 at 2022-07-22 17:18:04 +0300
+Processing by SpecialistServicesController#create as */*
+  Parameters: {"specialist_service"=>{"service_id"=>2, "duration"=>23}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "69895a30-30d7-419f-ad75-7515e9242bb0"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/specialist_services_controller.rb:19
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/specialist_services_controller.rb:19
+  [1m[36mService Load (0.2ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/specialist_services_controller.rb:19
+  [1m[36mSpecialistService Create (2.4ms)[0m  [1m[32mINSERT INTO "specialist_services" ("user_id", "service_id", "duration", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 3], ["service_id", 2], ["duration", 23], ["created_at", "2022-07-22 14:18:04.546669"], ["updated_at", "2022-07-22 14:18:04.546669"]]
+  ↳ app/controllers/specialist_services_controller.rb:19
+  [1m[35m (8.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/specialist_services_controller.rb:19
+Completed 201 Created in 39ms (Views: 2.6ms | ActiveRecord: 12.6ms)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:11
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:11
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:11
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:11
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:11
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:11
+Migrating to DropServicesTable (20220725100550)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:11
+  [1m[35m (2.0ms)[0m  [1m[35mDROP TABLE "services"[0m
+  ↳ db/migrate/20220725100550_drop_services_table.rb:3
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  ↳ bin/rails:11
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+Migrating to DropServicesTable (20220725100550)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (3.5ms)[0m  [1m[35mDROP TABLE "services"[0m
+  ↳ db/migrate/20220725100550_drop_services_table.rb:3
+  [1m[35m (0.8ms)[0m  [1m[31mrollback transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+Migrating to DropServicesTable (20220725100550)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (1.9ms)[0m  [1m[35mDROP TABLE "services"[0m
+  ↳ db/migrate/20220725100550_drop_services_table.rb:3
+  [1m[35m (2.9ms)[0m  [1m[31mrollback transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+Migrating to DropSpecialistsServicesTable (20220725103909)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (2.1ms)[0m  [1m[35mDROP TABLE "specialist_services"[0m
+  ↳ db/migrate/20220725103909_drop_specialists_services_table.rb:3
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+Migrating to DropClientsAppointments (20220725104626)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (1.7ms)[0m  [1m[35mDROP TABLE "client_appointments"[0m
+  ↳ db/migrate/20220725104626_drop_clients_appointments.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220725104626"]]
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (6.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+Migrating to DropSpecialistsServicesTable (20220725104751)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (2.0ms)[0m  [1m[35mDROP TABLE "specialist_services"[0m
+  ↳ db/migrate/20220725104751_drop_specialists_services_table.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220725104751"]]
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (11.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+Migrating to DropServicesTable (20220725105043)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (1.4ms)[0m  [1m[35mDROP TABLE "services"[0m
+  ↳ db/migrate/20220725105043_drop_services_table.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220725105043"]]
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (7.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+Migrating to CreateCategoriesTable (20220725112853)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20220725112853_create_categories_table.rb:3
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "categories" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT '' NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20220725112853_create_categories_table.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220725112853"]]
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (13.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+Migrating to CreateServices (20220725113441)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "services" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "category_id" integer, "name" varchar DEFAULT '' NOT NULL, "descriprion" varchar DEFAULT '' NOT NULL, "duration" integer DEFAULT 0 NOT NULL, "price" integer DEFAULT 0 NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_51a813203f"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_5a36fd9326"
+FOREIGN KEY ("category_id")
+  REFERENCES "categories" ("id")
+)[0m
+  ↳ db/migrate/20220725113441_create_services.rb:3
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE  INDEX "index_services_on_user_id" ON "services" ("user_id")[0m
+  ↳ db/migrate/20220725113441_create_services.rb:3
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE  INDEX "index_services_on_category_id" ON "services" ("category_id")[0m
+  ↳ db/migrate/20220725113441_create_services.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220725113441"]]
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (6.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
