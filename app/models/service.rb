@@ -1,9 +1,12 @@
 # frozen_string_literal: true
 
 class Service < ApplicationRecord
-  has_many :specialist_services
-  has_many :users,  through: :specialist_services
-  validates :name, presence: true,
-            uniqueness: true,
-            length: { maximum: 20 }
+   belongs_to :user
+   belongs_to :category
+   has_many :client_appointments
+   #has_many :users,  through: :client_appointments
+  validates :user_id, :category_id, :duration, :name, :descriprion, :price, presence: true
+  validates :duration, length: { in: 1..5 },
+             numericality: true
+  validates :descriprion, length: { maximum: 500 }
 end
