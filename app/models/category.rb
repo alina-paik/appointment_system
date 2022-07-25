@@ -5,5 +5,5 @@ class Category < ApplicationRecord
   has_many :users,  through: :services
   validates :name, presence: true,
             uniqueness: true,
-            length: { maximum: 20 }
+            length: { maximum: 50 }
 end

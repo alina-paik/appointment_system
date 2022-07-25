@@ -6,3 +6,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+    [
+      { name: 'Home handyman'},
+      { name: 'Complete repair'},
+      { name: 'Finishing work'},
+      { name: 'Construction and installation work'},
+      { name: 'Other'}
+    ].each do |attribute|
+      puts attribute
+      if Category.find_by(name: attribute[:name]).nil?
+        Category.create(name: attribute[:name])
+      end
+    end
