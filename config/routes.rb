@@ -8,7 +8,8 @@ Rails.application.routes.draw do
              }
    get 'users/profile', to: 'users#profile'
 
-   resources :specialist_services 
+   resources :services
+   resources(:categories, only: [:index])
   end
 
 
