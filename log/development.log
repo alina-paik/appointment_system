@@ -4120,3 +4120,384 @@ vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/thread_pool.rb:135:in `block 
   [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "Other"], ["LIMIT", 1]]
   ↳ db/seeds.rb:18
   [1m[36mCategory Load (1.7ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/categories" for ::1 at 2022-07-25 18:36:05 +0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by CategoriesController#index as */*
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:6
+Completed 200 OK in 41ms (Views: 21.0ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-07-25 18:38:47 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"5674489@email.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"5674489@email.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "69895a30-30d7-419f-ad75-7515e9242bb0"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 56ms (Views: 0.5ms | ActiveRecord: 5.2ms)
+
+
+Started POST "/services" for ::1 at 2022-07-25 18:38:55 +0300
+Error occurred while parsing request parameters.
+Contents:
+
+{
+    "service": {
+        "category_id": 2,
+        "name": "test",
+        "discrition": "esfdytwsdkygkuywegdlyedfgwlegy",
+        "duration": 23
+        "price": 240
+    }
+}
+  
+ActionDispatch::Http::Parameters::ParseError (859: unexpected token at '{
+    "service": {
+        "category_id": 2,
+        "name": "test",
+        "discrition": "esfdytwsdkygkuywegdlyedfgwlegy",
+        "duration": 23
+        "price": 240
+    }
+}'):
+  
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/http/parameters.rb:117:in `rescue in parse_formatted_parameters'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/http/parameters.rb:111:in `parse_formatted_parameters'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/http/request.rb:381:in `block in POST'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/request.rb:69:in `fetch'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/request.rb:69:in `fetch_header'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/http/request.rb:380:in `POST'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/http/parameters.rb:55:in `parameters'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_controller/metal/params_wrapper.rb:290:in `_wrapper_enabled?'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_controller/metal/params_wrapper.rb:244:in `process_action'
+vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/abstract_controller/base.rb:134:in `process'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_controller/metal.rb:191:in `dispatch'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_controller/metal.rb:252:in `dispatch'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/routing/route_set.rb:34:in `serve'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/journey/router.rb:52:in `block in serve'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/journey/router.rb:35:in `each'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/journey/router.rb:35:in `serve'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/routing/route_set.rb:840:in `call'
+vendor/bundle/ruby/2.7.0/gems/warden-jwt_auth-0.5.0/lib/warden/jwt_auth/middleware/token_dispatcher.rb:20:in `call'
+vendor/bundle/ruby/2.7.0/gems/warden-jwt_auth-0.5.0/lib/warden/jwt_auth/middleware/revocation_manager.rb:21:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/builder.rb:244:in `call'
+vendor/bundle/ruby/2.7.0/gems/warden-jwt_auth-0.5.0/lib/warden/jwt_auth/middleware.rb:23:in `call'
+vendor/bundle/ruby/2.7.0/gems/devise-jwt-cookie-0.3.0/lib/devise/jwt/cookie/middleware.rb:15:in `call'
+vendor/bundle/ruby/2.7.0/gems/warden-1.2.9/lib/warden/manager.rb:36:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/warden-1.2.9/lib/warden/manager.rb:34:in `catch'
+vendor/bundle/ruby/2.7.0/gems/warden-1.2.9/lib/warden/manager.rb:34:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/etag.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/conditional_get.rb:40:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/head.rb:12:in `call'
+vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/migration.rb:559:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/callbacks.rb:98:in `run_callbacks'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:26:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/sendfile.rb:110:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-cors-1.1.1/lib/rack/cors.rb:100:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/engine.rb:524:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/configuration.rb:227:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:706:in `handle_request'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:476:in `process_client'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:334:in `block in run'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/services" for ::1 at 2022-07-25 18:39:15 +0300
+Error occurred while parsing request parameters.
+Contents:
+
+{
+    "service": {
+        "category_id": 2,
+        "name": "test",
+        "discription": "esfdytwsdkygkuywegdlyedfgwlegy",
+        "duration": 23
+        "price": 240
+    }
+}
+  
+ActionDispatch::Http::Parameters::ParseError (859: unexpected token at '{
+    "service": {
+        "category_id": 2,
+        "name": "test",
+        "discription": "esfdytwsdkygkuywegdlyedfgwlegy",
+        "duration": 23
+        "price": 240
+    }
+}'):
+  
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/http/parameters.rb:117:in `rescue in parse_formatted_parameters'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/http/parameters.rb:111:in `parse_formatted_parameters'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/http/request.rb:381:in `block in POST'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/request.rb:69:in `fetch'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/request.rb:69:in `fetch_header'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/http/request.rb:380:in `POST'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/http/parameters.rb:55:in `parameters'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_controller/metal/params_wrapper.rb:290:in `_wrapper_enabled?'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_controller/metal/params_wrapper.rb:244:in `process_action'
+vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/abstract_controller/base.rb:134:in `process'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_controller/metal.rb:191:in `dispatch'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_controller/metal.rb:252:in `dispatch'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/routing/route_set.rb:34:in `serve'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/journey/router.rb:52:in `block in serve'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/journey/router.rb:35:in `each'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/journey/router.rb:35:in `serve'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/routing/route_set.rb:840:in `call'
+vendor/bundle/ruby/2.7.0/gems/warden-jwt_auth-0.5.0/lib/warden/jwt_auth/middleware/token_dispatcher.rb:20:in `call'
+vendor/bundle/ruby/2.7.0/gems/warden-jwt_auth-0.5.0/lib/warden/jwt_auth/middleware/revocation_manager.rb:21:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/builder.rb:244:in `call'
+vendor/bundle/ruby/2.7.0/gems/warden-jwt_auth-0.5.0/lib/warden/jwt_auth/middleware.rb:23:in `call'
+vendor/bundle/ruby/2.7.0/gems/devise-jwt-cookie-0.3.0/lib/devise/jwt/cookie/middleware.rb:15:in `call'
+vendor/bundle/ruby/2.7.0/gems/warden-1.2.9/lib/warden/manager.rb:36:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/warden-1.2.9/lib/warden/manager.rb:34:in `catch'
+vendor/bundle/ruby/2.7.0/gems/warden-1.2.9/lib/warden/manager.rb:34:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/etag.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/conditional_get.rb:40:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/head.rb:12:in `call'
+vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/migration.rb:559:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/callbacks.rb:98:in `run_callbacks'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:26:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/sendfile.rb:110:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-cors-1.1.1/lib/rack/cors.rb:100:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/engine.rb:524:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/configuration.rb:227:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:706:in `handle_request'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:476:in `process_client'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:334:in `block in run'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/services" for ::1 at 2022-07-25 18:39:32 +0300
+Error occurred while parsing request parameters.
+Contents:
+
+{
+    "service": {
+        "category_id": 2,
+        "name": "test",
+        "descriprion": "esfdytwsdkygkuywegdlyedfgwlegy",
+        "duration": 23
+        "price": 240
+    }
+}
+  
+ActionDispatch::Http::Parameters::ParseError (859: unexpected token at '{
+    "service": {
+        "category_id": 2,
+        "name": "test",
+        "descriprion": "esfdytwsdkygkuywegdlyedfgwlegy",
+        "duration": 23
+        "price": 240
+    }
+}'):
+  
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/http/parameters.rb:117:in `rescue in parse_formatted_parameters'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/http/parameters.rb:111:in `parse_formatted_parameters'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/http/request.rb:381:in `block in POST'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/request.rb:69:in `fetch'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/request.rb:69:in `fetch_header'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/http/request.rb:380:in `POST'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/http/parameters.rb:55:in `parameters'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_controller/metal/params_wrapper.rb:290:in `_wrapper_enabled?'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_controller/metal/params_wrapper.rb:244:in `process_action'
+vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/abstract_controller/base.rb:134:in `process'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_controller/metal.rb:191:in `dispatch'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_controller/metal.rb:252:in `dispatch'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/routing/route_set.rb:34:in `serve'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/journey/router.rb:52:in `block in serve'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/journey/router.rb:35:in `each'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/journey/router.rb:35:in `serve'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/routing/route_set.rb:840:in `call'
+vendor/bundle/ruby/2.7.0/gems/warden-jwt_auth-0.5.0/lib/warden/jwt_auth/middleware/token_dispatcher.rb:20:in `call'
+vendor/bundle/ruby/2.7.0/gems/warden-jwt_auth-0.5.0/lib/warden/jwt_auth/middleware/revocation_manager.rb:21:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/builder.rb:244:in `call'
+vendor/bundle/ruby/2.7.0/gems/warden-jwt_auth-0.5.0/lib/warden/jwt_auth/middleware.rb:23:in `call'
+vendor/bundle/ruby/2.7.0/gems/devise-jwt-cookie-0.3.0/lib/devise/jwt/cookie/middleware.rb:15:in `call'
+vendor/bundle/ruby/2.7.0/gems/warden-1.2.9/lib/warden/manager.rb:36:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/warden-1.2.9/lib/warden/manager.rb:34:in `catch'
+vendor/bundle/ruby/2.7.0/gems/warden-1.2.9/lib/warden/manager.rb:34:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/etag.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/conditional_get.rb:40:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/head.rb:12:in `call'
+vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/migration.rb:559:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/callbacks.rb:98:in `run_callbacks'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:26:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/sendfile.rb:110:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-cors-1.1.1/lib/rack/cors.rb:100:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/engine.rb:524:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/configuration.rb:227:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:706:in `handle_request'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:476:in `process_client'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:334:in `block in run'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/services" for ::1 at 2022-07-25 18:40:48 +0300
+Processing by ServicesController#create as */*
+  Parameters: {"service"=>{"category_id"=>2, "name"=>"test", "descriprion"=>"esfdytwsdkygkuywegdlyedfgwlegy", "duration"=>23, "price"=>240}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "1dcdbb41-f7cd-48e1-aba1-907156bfe05c"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/services_controller.rb:19
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/services_controller.rb:19
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/services_controller.rb:19
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/services_controller.rb:19
+Completed 422 Unprocessable Entity in 124ms (Views: 0.5ms | ActiveRecord: 6.8ms)
+
+
+Started POST "/services" for ::1 at 2022-07-25 18:41:16 +0300
+Processing by ServicesController#create as */*
+  Parameters: {"service"=>{"category_id"=>6, "name"=>"test", "descriprion"=>"esfdytwsdkygkuywegdlyedfgwlegy", "duration"=>23, "price"=>240}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "1dcdbb41-f7cd-48e1-aba1-907156bfe05c"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/services_controller.rb:19
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/services_controller.rb:19
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/services_controller.rb:19
+  [1m[36mService Create (1.1ms)[0m  [1m[32mINSERT INTO "services" ("user_id", "category_id", "name", "descriprion", "duration", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 3], ["category_id", 6], ["name", "test"], ["descriprion", "esfdytwsdkygkuywegdlyedfgwlegy"], ["duration", 23], ["price", 240], ["created_at", "2022-07-25 15:41:16.906625"], ["updated_at", "2022-07-25 15:41:16.906625"]]
+  ↳ app/controllers/services_controller.rb:19
+  [1m[35m (9.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/services_controller.rb:19
+Completed 201 Created in 45ms (Views: 2.7ms | ActiveRecord: 12.7ms)
+
+
+Started GET "/services" for ::1 at 2022-07-25 18:41:29 +0300
+Processing by ServicesController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "1dcdbb41-f7cd-48e1-aba1-907156bfe05c"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mService Load (0.7ms)[0m  [1m[34mSELECT "services".* FROM "services" WHERE "services"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/services_controller.rb:8
+Completed 200 OK in 12ms (Views: 3.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/services/3" for ::1 at 2022-07-25 18:41:36 +0300
+Processing by ServicesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "1dcdbb41-f7cd-48e1-aba1-907156bfe05c"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mService Load (0.6ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? AND "services"."user_id" = ? LIMIT ?[0m  [["id", 3], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/services_controller.rb:43
+Completed 200 OK in 14ms (Views: 0.4ms | ActiveRecord: 2.0ms)
+
+
+Started PUT "/services/1" for ::1 at 2022-07-25 18:48:38 +0300
+Processing by ServicesController#update as */*
+  Parameters: {"service"=>{"category_id"=>7, "name"=>"tesswst", "descriprion"=>"esfdytwsdkygkuywegdlyedfgwlegy", "duration"=>253, "price"=>1235647}, "id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "1dcdbb41-f7cd-48e1-aba1-907156bfe05c"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mService Load (0.7ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? AND "services"."user_id" = ? LIMIT ?[0m  [["id", 1], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/services_controller.rb:43
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/services_controller.rb:28
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/services_controller.rb:28
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/services_controller.rb:28
+  [1m[36mService Update (2.2ms)[0m  [1m[33mUPDATE "services" SET "category_id" = ?, "duration" = ?, "name" = ?, "price" = ?, "updated_at" = ? WHERE "services"."id" = ?[0m  [["category_id", 7], ["duration", 253], ["name", "tesswst"], ["price", 1235647], ["updated_at", "2022-07-25 15:48:39.237084"], ["id", 1]]
+  ↳ app/controllers/services_controller.rb:28
+  [1m[35m (8.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/services_controller.rb:28
+Completed 200 OK in 170ms (Views: 1.7ms | ActiveRecord: 22.9ms)
+
+
+Started DELETE "/services/1" for ::1 at 2022-07-25 18:49:45 +0300
+Processing by ServicesController#destroy as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "1dcdbb41-f7cd-48e1-aba1-907156bfe05c"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mService Load (0.6ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? AND "services"."user_id" = ? LIMIT ?[0m  [["id", 1], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/services_controller.rb:43
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/services_controller.rb:37
+  [1m[36mService Destroy (3.7ms)[0m  [1m[31mDELETE FROM "services" WHERE "services"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/services_controller.rb:37
+  [1m[35m (8.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/services_controller.rb:37
+Completed 204 No Content in 34ms (ActiveRecord: 14.2ms)
+
+
+Started GET "/services" for ::1 at 2022-07-25 18:50:15 +0300
+Processing by ServicesController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "1dcdbb41-f7cd-48e1-aba1-907156bfe05c"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mService Load (0.6ms)[0m  [1m[34mSELECT "services".* FROM "services" WHERE "services"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/services_controller.rb:8
+Completed 200 OK in 10ms (Views: 2.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/categories" for ::1 at 2022-07-25 18:50:27 +0300
+Processing by CategoriesController#index as */*
+  [1m[36mCategory Load (1.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:6
+Completed 200 OK in 11ms (Views: 8.9ms | ActiveRecord: 1.1ms)
+
+
