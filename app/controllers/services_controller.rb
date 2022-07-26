@@ -2,9 +2,10 @@ class ServicesController < ApplicationController
     before_action :authenticate_user!
     before_action :set_service, only: %i[show update destroy]
 
-    # GET /services
+
     def index
-      @services = Service.where(user_id: current_user.id)
+    # GET /sevices?page=:page
+      @services = Service.order(:name).page params[:page]
       render json: @services
     end
 

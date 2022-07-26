@@ -14,7 +14,11 @@ gem "rubocop-minitest"
 gem "rubocop-packaging"
 gem "rubocop-performance"
 gem 'thor', '~> 0.20.3'
-
+# pagination
+gem 'kaminari'
+#serializer
+gem 'active_model_serializers'
+#gem 'jsonapi-serializer'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
