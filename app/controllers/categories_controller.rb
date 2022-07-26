@@ -1,8 +1,9 @@
 class CategoriesController < ApplicationController
 
-  # GET /categories
+
   def index
-    @categories = Category.all
+  # GET /categories?page=:page
+    @categories = Category.order(:name).page(params[:page])
     render json: @categories
   end
 end
