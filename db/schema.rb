@@ -10,12 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_07_25_113441) do
+ActiveRecord::Schema.define(version: 2022_07_29_095341) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name", default: "", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "client_appointments", force: :cascade do |t|
+    t.integer "service_id"
+    t.string "client_name", default: "", null: false
+    t.string "client_phone_number", default: "", null: false
+    t.string "client_email", default: "", null: false
+    t.datetime "from"
+    t.datetime "to"
+    t.string "status", default: "", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["service_id"], name: "index_client_appointments_on_service_id"
   end
 
   create_table "jwt_denylist", force: :cascade do |t|
