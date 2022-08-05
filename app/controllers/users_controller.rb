@@ -1,5 +1,6 @@
 
 class UsersController < ApplicationController
+  respond_to :json
 before_action :authenticate_user!
 # GET /users/profile
   def profile

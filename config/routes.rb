@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   devise_for :users,
              controllers: {
                sessions: "users/sessions",
-               registrations: "users/registrations"
+               registrations: "users/registrations",
+               #confirmations: "users/confirmations"
              }
    get 'users/profile', to: 'users#profile'
    patch 'users/change_password', to: 'users#update_password'
