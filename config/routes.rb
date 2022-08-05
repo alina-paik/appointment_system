@@ -7,6 +7,11 @@ Rails.application.routes.draw do
                registrations: "users/registrations"
              }
    get 'users/profile', to: 'users#profile'
+   patch 'users/change_password', to: 'users#update_password'
+
+   get 'client_appointments/pending', to: 'client_appointments#index_pending'
+   get 'client_appointments/:id', to: 'client_appointments#show'
+   put 'client_appointments/:id', to: 'client_appointments#update'
 
    resources :services
    resources :categories
