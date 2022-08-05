@@ -6,11 +6,12 @@ class User < ApplicationRecord
   has_many :services
   has_many :categories,  through: :services
   # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  # :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable,
          :jwt_cookie_authenticatable,
          :jwt_authenticatable,
          :registerable,
+         #:confirmable,
          jwt_revocation_strategy: JwtDenylist
 
   validates :name, :phone_number, presence: true
