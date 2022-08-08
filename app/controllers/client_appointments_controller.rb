@@ -1,27 +1,22 @@
 class ClientAppointmentsController < ApplicationController
-  before_action :authenticate_user!, only: %i[index show update]
+  before_action :authenticate_user!, only: %i[index_pending show update]
   before_action :set_appointment, only: %i[show update]
   # POST /client_appointments
   def create
-    appointment =
-    if current_user
-      # init_pending_appointment(set_for_current_user)
-      init_pending_appointment(set_for_guest)
-    else
-      init_pending_appointment(set_for_guest)
-    end
-
-    if appointment.save
+    result = ClientAppointments::CreateForGuest.call(**set_for_guest)
+    if result[:result]
+      appointment = result[:result]
       render json: appointment, status: :created, location: appointment
     else
-      render json: appointment.errors, status: :unprocessable_entity
+      errors = result[:errors]
+      render json: errors, status: :unprocessable_entity
     end
   end
 
   # GET client_appointments/pending?page=3
+
   def index_pending
-    service_ids = Service.where(user_id: current_user.id).map{|n| n.id}
-    appointments = ClientAppointment.where(service_id: service_ids, status: 'pending').page(params[:page])
+    appointments = ClientAppointments::SearchPending.call(user_id: current_user.id, page: params[:page])
     render json: appointments
   end
 
@@ -49,17 +44,13 @@ class ClientAppointmentsController < ApplicationController
 
   private
 
-  def init_pending_appointment(attributes)
-    ClientAppointment.new(attributes.merge(status: "pending"))
-  end
-
-  def set_for_current_user
-    params.require(:client_appointment).permit(:service_id).merge(user_id: current_user.id,
-      name: current_user.name, phone_number: current_user.phone_number, email: current_user.email)
-  end
+  # def set_for_current_user
+  #   params.require(:client_appointment).permit(:service_id).merge(user_id: current_user.id,
+  #     name: current_user.name, phone_number: current_user.phone_number, email: current_user.email)
+  # end
 
   def set_for_guest
-    params.require(:client_appointment).permit(:service_id, :client_name, :client_phone_number, :client_email)
+    params.require(:client_appointment).permit(:service_id, :client_name, :client_phone_number, :client_email).to_h.symbolize_keys
   end
 
   def set_for_update
