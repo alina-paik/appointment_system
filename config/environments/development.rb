@@ -37,9 +37,9 @@ Rails.application.configure do
 
   config.action_mailer.perform_deliveries = false
   config.action_mailer.raise_delivery_errors = false
-  #config.action_mailer.default_url_options = { host: ENV['MAIL_HOST'] }
-  #config.action_mailer.delivery_method = :smtp
-  #config.action_mailer.smtp_settings = {
+  # config.action_mailer.default_url_options = { host: ENV['MAIL_HOST'] }
+  # config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.smtp_settings = {
   #  user_name:      ENV['SENDMAIL_USERNAME'],
   #  password:       ENV['SENDMAIL_PASSWORD'],
   #  domain:         ENV['MAIL_HOST'],
@@ -47,7 +47,7 @@ Rails.application.configure do
   #  port:          '587',
   #  authentication: :plain,
   #  enable_starttls_auto: true
-  #}
+  # }
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log

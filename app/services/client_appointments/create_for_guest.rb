@@ -1,6 +1,7 @@
+# frozen_string_literal: true
+
 module ClientAppointments
   class CreateForGuest < ApplicationService
-
     attr_reader :service_id, :client_name, :client_phone_number, :client_email
 
     def initialize(service_id:, client_name:, client_phone_number:, client_email:)
@@ -25,7 +26,7 @@ module ClientAppointments
         client_name: client_name,
         client_phone_number: client_phone_number,
         client_email: client_email,
-        status: 'pending'
+        status: "pending"
       }
     end
   end

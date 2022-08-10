@@ -1,5 +1,6 @@
+  # frozen_string_literal: true
 
-# app/controllers/users/confirmations_controller.rb
+  # app/controllers/users/confirmations_controller.rb
   module Users
     class ConfirmationsController < Devise::ConfirmationsController
       respond_to :json
@@ -11,11 +12,10 @@
         yield resource if block_given?
 
         if resource.errors.empty?
-          render json: {email: :confirmed}
+          render json: { email: :confirmed }
         else
-          render json: {email: :not_confirmed}
+          render json: { email: :not_confirmed }
         end
       end
-
     end
   end
