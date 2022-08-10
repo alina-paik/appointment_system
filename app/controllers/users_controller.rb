@@ -1,8 +1,9 @@
+# frozen_string_literal: true
 
 class UsersController < ApplicationController
   respond_to :json
-before_action :authenticate_user!
-# GET /users/profile
+  before_action :authenticate_user!
+  # GET /users/profile
   def profile
     render json:  current_user
   end
@@ -19,8 +20,7 @@ before_action :authenticate_user!
   end
 
   private
-
-  def user_params
-    params.require(:user).permit(:password, :password_confirmation)
-  end
+    def user_params
+      params.require(:user).permit(:password, :password_confirmation)
+    end
 end
