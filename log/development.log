@@ -11517,3 +11517,117 @@ Processing by UsersController#profile as */*
 Completed 200 OK in 113ms (Views: 32.6ms | ActiveRecord: 5.2ms)
 
 
+Started GET "/client_appointments" for ::1 at 2022-08-12 15:43:21 +0300
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by ClientAppointmentsController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/client_appointments_controller.rb:20
+  [1m[36mJwtDenylist Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "9616399b-768e-4216-af20-7c5366c01d2a"], ["LIMIT", 1]]
+  ↳ app/controllers/client_appointments_controller.rb:20
+  [1m[36mService Load (2.3ms)[0m  [1m[34mSELECT "services".* FROM "services" WHERE "services"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/services/client_appointments/search.rb:12
+  [1m[36mClientAppointment Load (4.8ms)[0m  [1m[34mSELECT  "client_appointments".* FROM "client_appointments" WHERE "client_appointments"."status" = ? AND "client_appointments"."service_id" IN (?, ?, ?, ?) LIMIT ? OFFSET ?[0m  [["status", "200"], ["service_id", 2], ["service_id", 3], ["service_id", 4], ["service_id", 5], ["LIMIT", 3], ["OFFSET", 0]]
+  ↳ app/controllers/client_appointments_controller.rb:21
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (6.02ms)
+Completed 200 OK in 228ms (Views: 34.2ms | ActiveRecord: 20.6ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-08-12 15:43:34 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"5674489@email.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"5674489@email.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "9616399b-768e-4216-af20-7c5366c01d2a"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.22ms)
+Completed 200 OK in 78ms (Views: 66.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/client_appointments" for ::1 at 2022-08-12 15:43:41 +0300
+Processing by ClientAppointmentsController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/client_appointments_controller.rb:20
+  [1m[36mJwtDenylist Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "ec7f2fd1-83fe-4a2b-85d0-75ce9603faf6"], ["LIMIT", 1]]
+  ↳ app/controllers/client_appointments_controller.rb:20
+  [1m[36mService Load (0.8ms)[0m  [1m[34mSELECT "services".* FROM "services" WHERE "services"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/services/client_appointments/search.rb:12
+  [1m[36mClientAppointment Load (1.1ms)[0m  [1m[34mSELECT  "client_appointments".* FROM "client_appointments" WHERE "client_appointments"."status" = ? AND "client_appointments"."service_id" IN (?, ?, ?, ?) LIMIT ? OFFSET ?[0m  [["status", "200"], ["service_id", 2], ["service_id", 3], ["service_id", 4], ["service_id", 5], ["LIMIT", 3], ["OFFSET", 0]]
+  ↳ app/controllers/client_appointments_controller.rb:21
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (1.24ms)
+Completed 200 OK in 30ms (Views: 6.2ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/client_appointments" for ::1 at 2022-08-12 15:44:36 +0300
+Processing by ClientAppointmentsController#index as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ (byebug):1
+  [1m[36mJwtDenylist Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "ec7f2fd1-83fe-4a2b-85d0-75ce9603faf6"], ["LIMIT", 1]]
+  ↳ (byebug):1
+  [1m[36mService Load (1.1ms)[0m  [1m[34mSELECT "services".* FROM "services" WHERE "services"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/services/client_appointments/search.rb:12
+  [1m[36mClientAppointment Load (1.2ms)[0m  [1m[34mSELECT  "client_appointments".* FROM "client_appointments" WHERE "client_appointments"."status" = ? AND "client_appointments"."service_id" IN (?, ?, ?, ?) LIMIT ? OFFSET ?[0m  [["status", "200"], ["service_id", 2], ["service_id", 3], ["service_id", 4], ["service_id", 5], ["LIMIT", 3], ["OFFSET", 0]]
+  ↳ app/controllers/client_appointments_controller.rb:22
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (6.1ms)
+Completed 200 OK in 3955596ms (Views: 11.3ms | ActiveRecord: 17.0ms)
+
+
+Started GET "/client_appointments" for ::1 at 2022-08-12 17:06:30 +0300
+Processing by ClientAppointmentsController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/client_appointments_controller.rb:20
+  [1m[36mJwtDenylist Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "ec7f2fd1-83fe-4a2b-85d0-75ce9603faf6"], ["LIMIT", 1]]
+  ↳ app/controllers/client_appointments_controller.rb:20
+  [1m[36mService Load (0.8ms)[0m  [1m[34mSELECT "services".* FROM "services" WHERE "services"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/services/client_appointments/search.rb:12
+  [1m[36mClientAppointment Load (1.5ms)[0m  [1m[34mSELECT  "client_appointments".* FROM "client_appointments" WHERE "client_appointments"."status" = ? AND "client_appointments"."service_id" IN (?, ?, ?, ?) LIMIT ? OFFSET ?[0m  [["status", "200"], ["service_id", 2], ["service_id", 3], ["service_id", 4], ["service_id", 5], ["LIMIT", 3], ["OFFSET", 0]]
+  ↳ app/controllers/client_appointments_controller.rb:21
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (2.02ms)
+Completed 200 OK in 64102ms (Views: 9.1ms | ActiveRecord: 12.9ms)
+
+
+Started GET "/client_appointments" for ::1 at 2022-08-12 17:07:40 +0300
+Processing by ClientAppointmentsController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/client_appointments_controller.rb:20
+  [1m[36mJwtDenylist Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "ec7f2fd1-83fe-4a2b-85d0-75ce9603faf6"], ["LIMIT", 1]]
+  ↳ app/controllers/client_appointments_controller.rb:20
+  [1m[36mService Load (0.6ms)[0m  [1m[34mSELECT "services".* FROM "services" WHERE "services"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/services/client_appointments/search.rb:12
+  [1m[36mClientAppointment Load (1.5ms)[0m  [1m[34mSELECT  "client_appointments".* FROM "client_appointments" WHERE "client_appointments"."service_id" IN (?, ?, ?, ?) LIMIT ? OFFSET ?[0m  [["service_id", 2], ["service_id", 3], ["service_id", 4], ["service_id", 5], ["LIMIT", 3], ["OFFSET", 0]]
+  ↳ app/controllers/client_appointments_controller.rb:21
+[active_model_serializers]   [1m[36mService Load (1.2ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/client_appointments_controller.rb:21
+[active_model_serializers]   [1m[36mCACHE Service Load (0.1ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/client_appointments_controller.rb:21
+[active_model_serializers]   [1m[36mCACHE Service Load (0.1ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/client_appointments_controller.rb:21
+[active_model_serializers]   [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "client_appointments" WHERE "client_appointments"."service_id" IN (?, ?, ?, ?)[0m  [["service_id", 2], ["service_id", 3], ["service_id", 4], ["service_id", 5]]
+[active_model_serializers]   ↳ app/controllers/client_appointments_controller.rb:21
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (87.86ms)
+Completed 200 OK in 299ms (Views: 154.0ms | ActiveRecord: 16.0ms)
+
+
+Started GET "/client_appointments?status=pending" for ::1 at 2022-08-12 17:08:02 +0300
+Processing by ClientAppointmentsController#index as */*
+  Parameters: {"status"=>"pending"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/client_appointments_controller.rb:20
+  [1m[36mJwtDenylist Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "ec7f2fd1-83fe-4a2b-85d0-75ce9603faf6"], ["LIMIT", 1]]
+  ↳ app/controllers/client_appointments_controller.rb:20
+  [1m[36mService Load (0.6ms)[0m  [1m[34mSELECT "services".* FROM "services" WHERE "services"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/services/client_appointments/search.rb:12
+  [1m[36mClientAppointment Load (0.9ms)[0m  [1m[34mSELECT  "client_appointments".* FROM "client_appointments" WHERE "client_appointments"."status" = ? AND "client_appointments"."service_id" IN (?, ?, ?, ?) LIMIT ? OFFSET ?[0m  [["status", "pending"], ["service_id", 2], ["service_id", 3], ["service_id", 4], ["service_id", 5], ["LIMIT", 3], ["OFFSET", 0]]
+  ↳ app/controllers/client_appointments_controller.rb:21
+[active_model_serializers]   [1m[36mService Load (0.4ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/client_appointments_controller.rb:21
+[active_model_serializers]   [1m[36mCACHE Service Load (0.0ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/client_appointments_controller.rb:21
+[active_model_serializers]   [1m[36mCACHE Service Load (0.1ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/client_appointments_controller.rb:21
+[active_model_serializers]   [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "client_appointments" WHERE "client_appointments"."status" = ? AND "client_appointments"."service_id" IN (?, ?, ?, ?)[0m  [["status", "pending"], ["service_id", 2], ["service_id", 3], ["service_id", 4], ["service_id", 5]]
+[active_model_serializers]   ↳ app/controllers/client_appointments_controller.rb:21
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (29.27ms)
+Completed 200 OK in 55ms (Views: 32.9ms | ActiveRecord: 4.2ms)
+
+

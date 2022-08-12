@@ -15,12 +15,17 @@ class ClientAppointmentsController < ApplicationController
     end
   end
 
-  # GET client_appointments/pending?page=3
-
-  def index_pending
-    appointments = ClientAppointments::SearchPending.call(user_id: current_user.id, page: params[:page])
+  # GET client_appointments?page=3
+  def index
+    appointments = ClientAppointments::Search.call(user_id: current_user.id, page: params[:page], status: params[:status])
     render json: appointments
   end
+
+  # GET client_appointments/pending?page=3
+  # def index_pending
+  #   appointments = ClientAppointments::SearchPending.call(user_id: current_user.id, page: params[:page])
+  #   render json: appointments
+  # end
 
   # GET client_appointments/:id
   def show
