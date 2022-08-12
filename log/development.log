@@ -11446,3 +11446,74 @@ Completed 200 OK in 461ms (Views: 34.0ms | ActiveRecord: 5.5ms)
 
 
   [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started POST "/users/sign_in" for ::1 at 2022-08-12 13:10:19 +0300
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by Users::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"5674489@email.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"5674489@email.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "43aa05b3-f70f-4ff1-a35e-be8656928a8b"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.28ms)
+Completed 200 OK in 97ms (Views: 24.0ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/users/profile" for ::1 at 2022-08-12 13:10:25 +0300
+Processing by UsersController#profile as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "9616399b-768e-4216-af20-7c5366c01d2a"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 1.0ms)
+
+
+  
+NameError (uninitialized constant Users::FindUser):
+  
+app/controllers/users_controller.rb:9:in `profile'
+Started GET "/users/profile" for ::1 at 2022-08-12 13:11:00 +0300
+Processing by UsersController#profile as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "9616399b-768e-4216-af20-7c5366c01d2a"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/services/users/find_user.rb:11
+Completed 500 Internal Server Error in 71ms (ActiveRecord: 8.2ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: users.user_id: SELECT  "users".* FROM "users" WHERE "users"."user_id" = ? LIMIT ?):
+  
+app/services/users/find_user.rb:11:in `call'
+app/services/application_service.rb:5:in `call'
+app/controllers/users_controller.rb:9:in `profile'
+Started GET "/users/profile" for ::1 at 2022-08-12 13:12:08 +0300
+Processing by UsersController#profile as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "9616399b-768e-4216-af20-7c5366c01d2a"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 88ms (ActiveRecord: 10.5ms)
+
+
+  
+NameError (undefined local variable or method `user_id' for #<Users::FindUser:0x000055e3d2b6b5a0>):
+  
+app/services/users/find_user.rb:7:in `initialize'
+app/services/application_service.rb:5:in `new'
+app/services/application_service.rb:5:in `call'
+app/controllers/users_controller.rb:9:in `profile'
+Started GET "/users/profile" for ::1 at 2022-08-12 13:18:25 +0300
+Processing by UsersController#profile as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = ? LIMIT ?[0m  [["jti", "9616399b-768e-4216-af20-7c5366c01d2a"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/services/users/get_profile.rb:11
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (9.45ms)
+Completed 200 OK in 113ms (Views: 32.6ms | ActiveRecord: 5.2ms)
+
+
