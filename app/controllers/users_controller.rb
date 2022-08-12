@@ -5,7 +5,8 @@ class UsersController < ApplicationController
   before_action :authenticate_user!
   # GET /users/profile
   def profile
-    render json:  current_user
+    user = Users::GetProfile.call(id: current_user.id)
+    render json:  user
   end
 
   # PATCH users/change_password
