@@ -12577,3 +12577,751 @@ puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
   [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started POST "/users" for ::1 at 2022-09-03 19:05:20 +0300
+  [1m[35m (6.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"email"=>"alinapaik1229@gmail.com", "password"=>"[FILTERED]", "name"=>"test", "phone_number"=>"5377599504"}, "registration"=>{"user"=>{"email"=>"alinapaik1229@gmail.com", "password"=>"[FILTERED]", "name"=>"test", "phone_number"=>"5377599504"}}}
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (5.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."phone_number" = $1 LIMIT $2[0m  [["phone_number", "5377599504"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (5.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "phone_number") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "alinapaik1229@gmail.com"], ["encrypted_password", "$2a$12$BEsY8V/XcB22yc3pc6h5g.nzLAMHmXeIscp5G6pWuwvKnfvnbBj.a"], ["created_at", "2022-09-03 16:05:21.777511"], ["updated_at", "2022-09-03 16:05:21.777511"], ["name", "test"], ["phone_number", "5377599504"]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[35m (3.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.26ms)
+Completed 200 OK in 501ms (Views: 27.6ms | ActiveRecord: 37.8ms)
+
+
+Started POST "/users" for ::1 at 2022-09-03 19:05:35 +0300
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"email"=>"alinapaik1229@gmail.com", "password"=>"[FILTERED]", "name"=>"test", "phone_number"=>"5377599504"}, "registration"=>{"user"=>{"email"=>"alinapaik1229@gmail.com", "password"=>"[FILTERED]", "name"=>"test", "phone_number"=>"5377599504"}}}
+  [1m[35m (2.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (2.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."phone_number" = $1 LIMIT $2[0m  [["phone_number", "5377599504"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[35m (6.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:25
+  [1m[36mJwtDenylist Exists (4.6ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = $1 LIMIT $2[0m  [["jti", "91893509-7f9b-437e-bb5d-95eab0aee6c0"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:25
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.25ms)
+Completed 200 OK in 502ms (Views: 64.0ms | ActiveRecord: 24.0ms)
+
+
+Started POST "/users/sign_in%0A" for ::1 at 2022-09-03 19:05:43 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/users/sign_in%0A"):
+  
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:26:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/sendfile.rb:110:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-cors-1.1.1/lib/rack/cors.rb:100:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/engine.rb:524:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/configuration.rb:227:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:706:in `handle_request'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:476:in `process_client'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:334:in `block in run'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/users/sign_in" for ::1 at 2022-09-03 19:06:52 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"5674489@email.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"5674489@email.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (2.5ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = $1 LIMIT $2[0m  [["jti", "40d06c74-2a6a-4524-bf17-cfede1a28c1a"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.24ms)
+Completed 200 OK in 20ms (Views: 2.2ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/users/profile" for ::1 at 2022-09-03 19:06:59 +0300
+Processing by UsersController#profile as */*
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (5.3ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = $1 LIMIT $2[0m  [["jti", "268e27ff-b183-46b4-9fd5-08898da2c590"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/services/users/get_profile.rb:11
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (8.74ms)
+Completed 200 OK in 92ms (Views: 38.7ms | ActiveRecord: 10.1ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-09-03 19:07:50 +0300
+Processing by Users::SessionsController#destroy as */*
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users/sessions_controller.rb:13
+  [1m[36mJwtDenylist Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = $1 LIMIT $2[0m  [["jti", "268e27ff-b183-46b4-9fd5-08898da2c590"], ["LIMIT", 1]]
+  ↳ app/controllers/users/sessions_controller.rb:13
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.34ms)
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 200 OK in 26ms (Views: 4.7ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-09-03 19:07:58 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"5674489@email.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"5674489@email.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "5674489@email.com"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 76ms (ActiveRecord: 1.6ms)
+
+
+Processing by Users::SessionsController#new as */*
+  Parameters: {"user"=>{"email"=>"5674489@email.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"5674489@email.com", "password"=>"[FILTERED]"}}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.16ms)
+Completed 200 OK in 372ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/profile" for ::1 at 2022-09-03 19:08:02 +0300
+Processing by UsersController#profile as */*
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-09-03 19:08:03 +0300
+Processing by Users::SessionsController#new as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.93ms)
+Completed 200 OK in 12ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-09-03 19:08:42 +0300
+Processing by Users::SessionsController#destroy as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.27ms)
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 401 Unauthorized in 7ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/profile" for ::1 at 2022-09-03 19:08:45 +0300
+Processing by UsersController#profile as */*
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-09-03 19:08:45 +0300
+Processing by Users::SessionsController#new as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.29ms)
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-09-03 19:08:53 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"5674489@email.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"5674489@email.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "5674489@email.com"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 8ms (ActiveRecord: 2.8ms)
+
+
+Processing by Users::SessionsController#new as */*
+  Parameters: {"user"=>{"email"=>"5674489@email.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"5674489@email.com", "password"=>"[FILTERED]"}}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 200 OK in 371ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2022-09-03 19:09:48 +0300
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"email"=>"5674489@email.com", "password"=>"[FILTERED]", "name"=>"test", "phone_number"=>"53775995504"}, "registration"=>{"user"=>{"email"=>"5674489@email.com", "password"=>"[FILTERED]", "name"=>"test", "phone_number"=>"53775995504"}}}
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (4.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."phone_number" = $1 LIMIT $2[0m  [["phone_number", "53775995504"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (10.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "phone_number") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "5674489@email.com"], ["encrypted_password", "$2a$12$Ps1lIfBIhoeCx9YvlVxw6ODt8XRW2WXCIkV6NCFLvjb2Jy9PZRnSW"], ["created_at", "2022-09-03 16:09:48.549817"], ["updated_at", "2022-09-03 16:09:48.549817"], ["name", "test"], ["phone_number", "53775995504"]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.23ms)
+Completed 200 OK in 400ms (Views: 1.9ms | ActiveRecord: 21.2ms)
+
+
+Started GET "/users/profile" for ::1 at 2022-09-03 19:09:52 +0300
+Processing by UsersController#profile as */*
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (3.0ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = $1 LIMIT $2[0m  [["jti", "423c486c-5463-4c28-a97a-ea684fc7a4d6"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/users/get_profile.rb:11
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (1.83ms)
+Completed 200 OK in 33ms (Views: 12.0ms | ActiveRecord: 6.8ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-09-03 19:09:56 +0300
+Processing by Users::SessionsController#destroy as */*
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users/sessions_controller.rb:13
+  [1m[36mJwtDenylist Exists (1.6ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = $1 LIMIT $2[0m  [["jti", "423c486c-5463-4c28-a97a-ea684fc7a4d6"], ["LIMIT", 1]]
+  ↳ app/controllers/users/sessions_controller.rb:13
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.32ms)
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 200 OK in 15ms (Views: 2.2ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-09-03 19:09:59 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"5674489@email.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"5674489@email.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "5674489@email.com"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.19ms)
+Completed 200 OK in 399ms (Views: 1.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/profile" for ::1 at 2022-09-03 19:10:03 +0300
+Processing by UsersController#profile as */*
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (2.0ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = $1 LIMIT $2[0m  [["jti", "89538ccc-40eb-41b7-a40f-e363ac684123"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/users/get_profile.rb:11
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (2.96ms)
+Completed 200 OK in 23ms (Views: 4.8ms | ActiveRecord: 6.8ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-09-03 19:10:09 +0300
+Processing by Users::SessionsController#destroy as */*
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users/sessions_controller.rb:13
+  [1m[36mJwtDenylist Exists (1.9ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = $1 LIMIT $2[0m  [["jti", "89538ccc-40eb-41b7-a40f-e363ac684123"], ["LIMIT", 1]]
+  ↳ app/controllers/users/sessions_controller.rb:13
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.19ms)
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 200 OK in 28ms (Views: 2.0ms | ActiveRecord: 6.1ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-09-03 19:10:16 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"56744489@email.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"56744489@email.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "56744489@email.com"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 7ms (ActiveRecord: 1.6ms)
+
+
+Processing by Users::SessionsController#new as */*
+  Parameters: {"user"=>{"email"=>"56744489@email.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"56744489@email.com", "password"=>"[FILTERED]"}}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.21ms)
+Completed 200 OK in 379ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-09-03 19:10:35 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"56744489@email.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"56744489@email.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (9.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "56744489@email.com"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 15ms (ActiveRecord: 9.1ms)
+
+
+Processing by Users::SessionsController#new as */*
+  Parameters: {"user"=>{"email"=>"56744489@email.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"56744489@email.com", "password"=>"[FILTERED]"}}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.17ms)
+Completed 200 OK in 460ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-09-03 19:11:41 +0300
+Processing by Users::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"5674489@email.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"5674489@email.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "5674489@email.com"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.39ms)
+Completed 200 OK in 404ms (Views: 1.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/profile" for ::1 at 2022-09-03 19:11:46 +0300
+Processing by UsersController#profile as */*
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (1.9ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = $1 LIMIT $2[0m  [["jti", "5116057b-db73-4e20-86a8-6ed7d0d44e2c"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/users/get_profile.rb:11
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (1.68ms)
+Completed 200 OK in 57ms (Views: 8.2ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/services?page=1" for ::1 at 2022-09-03 19:11:54 +0300
+Processing by ServicesController#index as */*
+  Parameters: {"page"=>"1"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = $1 LIMIT $2[0m  [["jti", "5116057b-db73-4e20-86a8-6ed7d0d44e2c"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mService Load (7.3ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."user_id" = $1 LIMIT $2 OFFSET $3[0m  [["user_id", 2], ["LIMIT", 3], ["OFFSET", 0]]
+  ↳ app/controllers/services_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (14.93ms)
+Completed 200 OK in 101ms (Views: 26.4ms | ActiveRecord: 18.5ms)
+
+
+Started GET "/services/4" for ::1 at 2022-09-03 19:12:18 +0300
+Processing by ServicesController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = $1 LIMIT $2[0m  [["jti", "5116057b-db73-4e20-86a8-6ed7d0d44e2c"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mService Load (4.9ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."user_id" = $1 AND "services"."id" = $2 LIMIT $3[0m  [["user_id", 2], ["id", 4], ["LIMIT", 1]]
+  ↳ app/services/services/find_service.rb:13
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (5.96ms)
+Completed 200 OK in 76ms (Views: 42.4ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/services/3" for ::1 at 2022-09-03 19:12:26 +0300
+Processing by ServicesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (5.1ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = $1 LIMIT $2[0m  [["jti", "5116057b-db73-4e20-86a8-6ed7d0d44e2c"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mService Load (2.5ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."user_id" = $1 AND "services"."id" = $2 LIMIT $3[0m  [["user_id", 2], ["id", 3], ["LIMIT", 1]]
+  ↳ app/services/services/find_service.rb:13
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.15ms)
+Completed 200 OK in 37ms (Views: 7.7ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/services/1" for ::1 at 2022-09-03 19:12:33 +0300
+Processing by ServicesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (1.8ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = $1 LIMIT $2[0m  [["jti", "5116057b-db73-4e20-86a8-6ed7d0d44e2c"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mService Load (1.9ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."user_id" = $1 AND "services"."id" = $2 LIMIT $3[0m  [["user_id", 2], ["id", 1], ["LIMIT", 1]]
+  ↳ app/services/services/find_service.rb:13
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.2ms)
+Completed 200 OK in 35ms (Views: 7.9ms | ActiveRecord: 5.7ms)
+
+
+Started POST "/services" for ::1 at 2022-09-03 19:12:45 +0300
+Processing by ServicesController#create as */*
+  Parameters: {"service"=>{"category_id"=>10, "name"=>"tesssst", "description"=>"esfdytwsdkygkuywegdlyedfgwlegy", "duration"=>23, "price"=>240}}
+  [1m[36mUser Load (7.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (5.3ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = $1 LIMIT $2[0m  [["jti", "5116057b-db73-4e20-86a8-6ed7d0d44e2c"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/services/create.rb:18
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/services/create.rb:18
+  [1m[36mCategory Load (3.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/services/services/create.rb:18
+  [1m[35m (1.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/services/services/create.rb:18
+Completed 500 Internal Server Error in 294ms (ActiveRecord: 38.9ms)
+
+
+  
+NoMethodError (undefined method `descriprion' for #<Service:0x00007f9f3c7504f8>
+Did you mean?  description
+               description=
+               description?):
+  
+app/services/services/create.rb:18:in `call'
+app/services/application_service.rb:5:in `call'
+app/controllers/services_controller.rb:20:in `create'
+Started POST "/services" for ::1 at 2022-09-03 19:14:09 +0300
+Processing by ServicesController#create as */*
+  Parameters: {"service"=>{"category_id"=>10, "name"=>"tesssst", "description"=>"esfdytwsdkygkuywegdlyedfgwlegy", "duration"=>23, "price"=>240}}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (2.0ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = $1 LIMIT $2[0m  [["jti", "5116057b-db73-4e20-86a8-6ed7d0d44e2c"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/services/create.rb:18
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/services/create.rb:18
+  [1m[36mCategory Load (1.7ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/services/services/create.rb:18
+  [1m[35m (1.9ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/services/services/create.rb:18
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with ActiveModel::Errors (0.3ms)
+Completed 422 Unprocessable Entity in 320ms (Views: 21.5ms | ActiveRecord: 61.7ms)
+
+
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[36mCategory Load (1.9ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Home handyman"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mCategory Exists (1.6ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Home handyman"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mCategory Create (4.1ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Home handyman"], ["created_at", "2022-09-03 16:15:00.295772"], ["updated_at", "2022-09-03 16:15:00.295772"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (3.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[36mCategory Load (1.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Complete repair"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mCategory Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Complete repair"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mCategory Create (1.6ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Complete repair"], ["created_at", "2022-09-03 16:15:00.320797"], ["updated_at", "2022-09-03 16:15:00.320797"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[36mCategory Load (1.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Finishing work"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mCategory Exists (2.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Finishing work"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mCategory Create (1.8ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Finishing work"], ["created_at", "2022-09-03 16:15:00.341595"], ["updated_at", "2022-09-03 16:15:00.341595"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[36mCategory Load (1.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Construction and installation work"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[35m (1.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mCategory Exists (3.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Construction and installation work"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mCategory Create (1.6ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Construction and installation work"], ["created_at", "2022-09-03 16:15:00.365566"], ["updated_at", "2022-09-03 16:15:00.365566"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[36mCategory Load (1.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Other"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mCategory Exists (2.6ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Other"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mCategory Create (5.8ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Other"], ["created_at", "2022-09-03 16:15:00.384305"], ["updated_at", "2022-09-03 16:15:00.384305"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (5.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/bin/rake:23
+  [1m[36mCategory Load (2.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Home handyman"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mCategory Load (2.6ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Complete repair"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mCategory Load (1.6ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Finishing work"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mCategory Load (2.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Construction and installation work"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mCategory Load (1.8ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Other"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+Started GET "/categories?page=1" for ::1 at 2022-09-03 19:16:34 +0300
+Processing by CategoriesController#index as */*
+  Parameters: {"page"=>"1"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:7
+  [1m[36mJwtDenylist Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = $1 LIMIT $2[0m  [["jti", "5116057b-db73-4e20-86a8-6ed7d0d44e2c"], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:7
+  [1m[36mCategory Load (2.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" LIMIT $1 OFFSET $2[0m  [["LIMIT", 3], ["OFFSET", 0]]
+  ↳ app/controllers/categories_controller.rb:7
+[active_model_serializers]   [1m[36mService Load (1.8ms)[0m  [1m[34mSELECT "services".* FROM "services" WHERE "services"."category_id" = $1[0m  [["category_id", 1]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:7
+[active_model_serializers]   [1m[36mService Load (2.1ms)[0m  [1m[34mSELECT "services".* FROM "services" WHERE "services"."category_id" = $1[0m  [["category_id", 2]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:7
+[active_model_serializers]   [1m[36mService Load (1.7ms)[0m  [1m[34mSELECT "services".* FROM "services" WHERE "services"."category_id" = $1[0m  [["category_id", 3]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:7
+[active_model_serializers]   [1m[35m (5.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:7
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (48.74ms)
+Completed 200 OK in 107ms (Views: 81.0ms | ActiveRecord: 16.2ms)
+
+
+Started POST "/services" for ::1 at 2022-09-03 19:16:50 +0300
+Processing by ServicesController#create as */*
+  Parameters: {"service"=>{"category_id"=>1, "name"=>"tesssst", "description"=>"esfdytwsdkygkuywegdlyedfgwlegy", "duration"=>23, "price"=>240}}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (4.7ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = $1 LIMIT $2[0m  [["jti", "5116057b-db73-4e20-86a8-6ed7d0d44e2c"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[35m (2.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/services/create.rb:18
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/services/create.rb:18
+  [1m[36mCategory Load (2.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/services/services/create.rb:18
+  [1m[36mService Create (5.3ms)[0m  [1m[32mINSERT INTO "services" ("user_id", "category_id", "name", "description", "duration", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["user_id", 2], ["category_id", 1], ["name", "tesssst"], ["description", "esfdytwsdkygkuywegdlyedfgwlegy"], ["duration", 23], ["price", 240], ["created_at", "2022-09-03 16:16:50.900810"], ["updated_at", "2022-09-03 16:16:50.900810"]]
+  ↳ app/services/services/create.rb:18
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/services/create.rb:18
+[active_model_serializers] Rendered ServiceSerializer with ActiveModelSerializers::Adapter::JsonApi (4.93ms)
+Completed 201 Created in 94ms (Views: 14.5ms | ActiveRecord: 23.3ms)
+
+
+Started GET "/services?page=1" for ::1 at 2022-09-03 19:17:00 +0300
+Processing by ServicesController#index as */*
+  Parameters: {"page"=>"1"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (1.8ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = $1 LIMIT $2[0m  [["jti", "5116057b-db73-4e20-86a8-6ed7d0d44e2c"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mService Load (1.4ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."user_id" = $1 LIMIT $2 OFFSET $3[0m  [["user_id", 2], ["LIMIT", 3], ["OFFSET", 0]]
+  ↳ app/controllers/services_controller.rb:10
+[active_model_serializers]   [1m[36mCategory Load (1.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/services_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (10.59ms)
+Completed 200 OK in 32ms (Views: 15.0ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/services/1" for ::1 at 2022-09-03 19:17:07 +0300
+Processing by ServicesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (2.6ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = $1 LIMIT $2[0m  [["jti", "5116057b-db73-4e20-86a8-6ed7d0d44e2c"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mService Load (2.2ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."user_id" = $1 AND "services"."id" = $2 LIMIT $3[0m  [["user_id", 2], ["id", 1], ["LIMIT", 1]]
+  ↳ app/services/services/find_service.rb:13
+[active_model_serializers]   [1m[36mCategory Load (2.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/services_controller.rb:15
+[active_model_serializers] Rendered ServiceSerializer with ActiveModelSerializers::Adapter::JsonApi (9.23ms)
+Completed 200 OK in 83ms (Views: 8.3ms | ActiveRecord: 8.8ms)
+
+
+Started PUT "/services/1" for ::1 at 2022-09-03 19:17:35 +0300
+Processing by ServicesController#update as */*
+  Parameters: {"service"=>{"category_id"=>7, "name"=>"tesswst", "description"=>"esfdytwsdkygkuywegdlyedfgwlegy", "duration"=>253, "price"=>1235647}, "id"=>"1"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (1.8ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = $1 LIMIT $2[0m  [["jti", "5116057b-db73-4e20-86a8-6ed7d0d44e2c"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mService Load (2.4ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."user_id" = $1 AND "services"."id" = $2 LIMIT $3[0m  [["user_id", 2], ["id", 1], ["LIMIT", 1]]
+  ↳ app/services/services/find_service.rb:13
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/services/update.rb:18
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/services/update.rb:18
+  [1m[36mCategory Load (1.6ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/services/services/update.rb:18
+  [1m[35m (1.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/services/services/update.rb:18
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with ActiveModel::Errors (0.2ms)
+Completed 422 Unprocessable Entity in 59ms (Views: 1.6ms | ActiveRecord: 13.0ms)
+
+
+Started PUT "/services/1" for ::1 at 2022-09-03 19:17:43 +0300
+Processing by ServicesController#update as */*
+  Parameters: {"service"=>{"category_id"=>2, "name"=>"tesswst", "description"=>"esfdytwsdkygkuywegdlyedfgwlegy", "duration"=>253, "price"=>1235647}, "id"=>"1"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (1.6ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = $1 LIMIT $2[0m  [["jti", "5116057b-db73-4e20-86a8-6ed7d0d44e2c"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mService Load (1.7ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."user_id" = $1 AND "services"."id" = $2 LIMIT $3[0m  [["user_id", 2], ["id", 1], ["LIMIT", 1]]
+  ↳ app/services/services/find_service.rb:13
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/services/update.rb:18
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/services/update.rb:18
+  [1m[36mCategory Load (2.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/services/update.rb:18
+  [1m[36mService Update (2.1ms)[0m  [1m[33mUPDATE "services" SET "category_id" = $1, "name" = $2, "duration" = $3, "price" = $4, "updated_at" = $5 WHERE "services"."id" = $6[0m  [["category_id", 2], ["name", "tesswst"], ["duration", 253], ["price", 1235647], ["updated_at", "2022-09-03 16:17:43.853008"], ["id", 1]]
+  ↳ app/services/services/update.rb:18
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/services/update.rb:18
+[active_model_serializers] Rendered ServiceSerializer with ActiveModelSerializers::Adapter::JsonApi (3.1ms)
+Completed 201 Created in 48ms (Views: 5.9ms | ActiveRecord: 14.7ms)
+
+
+Started DELETE "/services/1" for ::1 at 2022-09-03 19:17:56 +0300
+Processing by ServicesController#destroy as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (3.3ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = $1 LIMIT $2[0m  [["jti", "5116057b-db73-4e20-86a8-6ed7d0d44e2c"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mService Load (1.8ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."user_id" = $1 AND "services"."id" = $2 LIMIT $3[0m  [["user_id", 2], ["id", 1], ["LIMIT", 1]]
+  ↳ app/services/services/find_service.rb:13
+  [1m[35m (4.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/services_controller.rb:44
+  [1m[36mService Destroy (4.9ms)[0m  [1m[31mDELETE FROM "services" WHERE "services"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/services_controller.rb:44
+  [1m[35m (4.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/services_controller.rb:44
+Completed 204 No Content in 61ms (ActiveRecord: 20.8ms)
+
+
+Started POST "/services" for ::1 at 2022-09-03 19:18:28 +0300
+Processing by ServicesController#create as */*
+  Parameters: {"service"=>{"category_id"=>1, "name"=>"tesssst", "description"=>"esfdytwsdkygkuywegdlyedfgwlegy", "duration"=>23, "price"=>240}}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (1.8ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = $1 LIMIT $2[0m  [["jti", "5116057b-db73-4e20-86a8-6ed7d0d44e2c"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/services/create.rb:18
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/services/create.rb:18
+  [1m[36mCategory Load (1.9ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/services/services/create.rb:18
+  [1m[36mService Create (3.0ms)[0m  [1m[32mINSERT INTO "services" ("user_id", "category_id", "name", "description", "duration", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["user_id", 2], ["category_id", 1], ["name", "tesssst"], ["description", "esfdytwsdkygkuywegdlyedfgwlegy"], ["duration", 23], ["price", 240], ["created_at", "2022-09-03 16:18:28.358295"], ["updated_at", "2022-09-03 16:18:28.358295"]]
+  ↳ app/services/services/create.rb:18
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/services/create.rb:18
+[active_model_serializers] Rendered ServiceSerializer with ActiveModelSerializers::Adapter::JsonApi (5.51ms)
+Completed 201 Created in 67ms (Views: 11.1ms | ActiveRecord: 13.3ms)
+
+
+Started PATCH "/users/change_password" for ::1 at 2022-09-03 19:19:06 +0300
+Processing by UsersController#update_password as */*
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = $1 LIMIT $2[0m  [["jti", "5116057b-db73-4e20-86a8-6ed7d0d44e2c"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:15
+  [1m[36mUser Exists (1.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."phone_number" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["phone_number", "53775995504"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15
+  [1m[36mUser Update (1.6ms)[0m  [1m[33mUPDATE "users" SET "encrypted_password" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["encrypted_password", "$2a$12$WE.MtczpFntnWGwWU/AGK.QVDiFwEyRcKe/NIHXLNTy7KgbtWQgeK"], ["updated_at", "2022-09-03 16:19:06.844297"], ["id", 2]]
+  ↳ app/controllers/users_controller.rb:15
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:15
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (1.48ms)
+Completed 200 OK in 385ms (Views: 6.3ms | ActiveRecord: 9.5ms)
+
+
+Started PATCH "/users/change_password" for ::1 at 2022-09-03 19:19:27 +0300
+Processing by UsersController#update_password as */*
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (3.7ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = $1 LIMIT $2[0m  [["jti", "5116057b-db73-4e20-86a8-6ed7d0d44e2c"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:15
+  [1m[36mUser Exists (2.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."phone_number" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["phone_number", "53775995504"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15
+  [1m[36mUser Update (2.4ms)[0m  [1m[33mUPDATE "users" SET "encrypted_password" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["encrypted_password", "$2a$12$.I1YRjdKViNcNtTKYamNJ.SrbrXnH/XIT3XIk5oNdt1ClM//o9POu"], ["updated_at", "2022-09-03 16:19:28.285490"], ["id", 2]]
+  ↳ app/controllers/users_controller.rb:15
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:15
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::JsonApi (1.45ms)
+Completed 200 OK in 440ms (Views: 3.2ms | ActiveRecord: 14.2ms)
+
+
+Started POST "/client_appointments%0A" for ::1 at 2022-09-03 19:19:53 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/client_appointments%0A"):
+  
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/rack/logger.rb:26:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.8/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.8/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.4/lib/rack/sendfile.rb:110:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-cors-1.1.1/lib/rack/cors.rb:100:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.8/lib/rails/engine.rb:524:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/configuration.rb:227:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:706:in `handle_request'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:476:in `process_client'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:334:in `block in run'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/client_appointments" for ::1 at 2022-09-03 19:20:02 +0300
+Processing by ClientAppointmentsController#create as */*
+  Parameters: {"client_appointment"=>{"service_id"=>1, "client_name"=>"testt", "client_phone_number"=>9987643453, "client_email"=>"122345dfsg@gmail.com"}}
+  [1m[35m (2.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/client_appointments/create_for_guest.rb:16
+  [1m[36mService Load (1.7ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/services/client_appointments/create_for_guest.rb:16
+  [1m[36mClientAppointment Exists (2.9ms)[0m  [1m[34mSELECT  1 AS one FROM "client_appointments" WHERE "client_appointments"."service_id" = $1 AND "client_appointments"."client_email" = $2 LIMIT $3[0m  [["service_id", 1], ["client_email", "122345dfsg@gmail.com"], ["LIMIT", 1]]
+  ↳ app/services/client_appointments/create_for_guest.rb:16
+  [1m[35m (3.0ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/services/client_appointments/create_for_guest.rb:16
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/client_appointments_controller.rb:14
+  [1m[36mJwtDenylist Exists (1.8ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = $1 LIMIT $2[0m  [["jti", "5116057b-db73-4e20-86a8-6ed7d0d44e2c"], ["LIMIT", 1]]
+  ↳ app/controllers/client_appointments_controller.rb:14
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with ActiveModel::Errors (1.11ms)
+Completed 422 Unprocessable Entity in 103ms (Views: 13.3ms | ActiveRecord: 24.9ms)
+
+
+Started POST "/client_appointments" for ::1 at 2022-09-03 19:20:25 +0300
+Processing by ClientAppointmentsController#create as */*
+  Parameters: {"client_appointment"=>{"service_id"=>2, "client_name"=>"testt", "client_phone_number"=>9987643453, "client_email"=>"122345dfsg@gmail.com"}}
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/client_appointments/create_for_guest.rb:16
+  [1m[36mService Load (1.5ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/client_appointments/create_for_guest.rb:16
+  [1m[36mClientAppointment Exists (2.3ms)[0m  [1m[34mSELECT  1 AS one FROM "client_appointments" WHERE "client_appointments"."service_id" = $1 AND "client_appointments"."client_email" = $2 LIMIT $3[0m  [["service_id", 2], ["client_email", "122345dfsg@gmail.com"], ["LIMIT", 1]]
+  ↳ app/services/client_appointments/create_for_guest.rb:16
+  [1m[36mClientAppointment Create (3.9ms)[0m  [1m[32mINSERT INTO "client_appointments" ("service_id", "client_name", "client_phone_number", "client_email", "status", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["service_id", 2], ["client_name", "testt"], ["client_phone_number", "9987643453"], ["client_email", "122345dfsg@gmail.com"], ["status", "pending"], ["created_at", "2022-09-03 16:20:25.556676"], ["updated_at", "2022-09-03 16:20:25.556676"]]
+  ↳ app/services/client_appointments/create_for_guest.rb:16
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/client_appointments/create_for_guest.rb:16
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/client_appointments_controller.rb:11
+  [1m[36mJwtDenylist Exists (1.9ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = $1 LIMIT $2[0m  [["jti", "5116057b-db73-4e20-86a8-6ed7d0d44e2c"], ["LIMIT", 1]]
+  ↳ app/controllers/client_appointments_controller.rb:11
+[active_model_serializers] Rendered ClientAppointmentSerializer with ActiveModelSerializers::Adapter::JsonApi (6.44ms)
+Completed 201 Created in 63ms (Views: 21.8ms | ActiveRecord: 15.5ms)
+
+
+Started PUT "/client_appointments/1" for ::1 at 2022-09-03 19:20:39 +0300
+Processing by ClientAppointmentsController#update as */*
+  Parameters: {"client_appointment"=>{"status"=>"confirmed", "from"=>"2022-08-04T13:33:03.969Z", "to"=>"2022-08-04T14:33:03.969Z"}, "id"=>"1"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (2.4ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = $1 LIMIT $2[0m  [["jti", "5116057b-db73-4e20-86a8-6ed7d0d44e2c"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mService Load (4.5ms)[0m  [1m[34mSELECT "services".* FROM "services" WHERE "services"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/services/client_appointments/find_appointment.rb:13
+  [1m[36mClientAppointment Load (1.6ms)[0m  [1m[34mSELECT  "client_appointments".* FROM "client_appointments" WHERE "client_appointments"."service_id" = $1 AND "client_appointments"."id" = $2 LIMIT $3[0m  [["service_id", 2], ["id", 1], ["LIMIT", 1]]
+  ↳ app/services/client_appointments/find_appointment.rb:14
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/client_appointments/update.rb:23
+  [1m[36mService Load (1.6ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/client_appointments/update.rb:23
+  [1m[36mClientAppointment Update (2.0ms)[0m  [1m[33mUPDATE "client_appointments" SET "status" = $1, "from" = $2, "to" = $3, "updated_at" = $4 WHERE "client_appointments"."id" = $5[0m  [["status", "confirmed"], ["from", "2022-08-04 13:33:03.969000"], ["to", "2022-08-04 14:33:03.969000"], ["updated_at", "2022-09-03 16:20:39.333877"], ["id", 1]]
+  ↳ app/services/client_appointments/update.rb:23
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/client_appointments/update.rb:23
+[active_model_serializers] Rendered ClientAppointmentSerializer with ActiveModelSerializers::Adapter::JsonApi (3.62ms)
+Completed 200 OK in 116ms (Views: 5.7ms | ActiveRecord: 17.1ms)
+
+
+Started GET "/client_appointments/1" for ::1 at 2022-09-03 19:20:52 +0300
+Processing by ClientAppointmentsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (5.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtDenylist Exists (4.9ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = $1 LIMIT $2[0m  [["jti", "5116057b-db73-4e20-86a8-6ed7d0d44e2c"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+  [1m[36mService Load (1.9ms)[0m  [1m[34mSELECT "services".* FROM "services" WHERE "services"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/services/client_appointments/find_appointment.rb:13
+  [1m[36mClientAppointment Load (10.7ms)[0m  [1m[34mSELECT  "client_appointments".* FROM "client_appointments" WHERE "client_appointments"."service_id" = $1 AND "client_appointments"."id" = $2 LIMIT $3[0m  [["service_id", 2], ["id", 1], ["LIMIT", 1]]
+  ↳ app/services/client_appointments/find_appointment.rb:14
+[active_model_serializers]   [1m[36mService Load (2.3ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/client_appointments_controller.rb:35
+[active_model_serializers] Rendered ClientAppointmentSerializer with ActiveModelSerializers::Adapter::JsonApi (8.82ms)
+Completed 200 OK in 59ms (Views: 7.9ms | ActiveRecord: 25.6ms)
+
+
+Started GET "/client_appointments?status=confirmed" for ::1 at 2022-09-03 19:21:16 +0300
+Processing by ClientAppointmentsController#index as */*
+  Parameters: {"status"=>"confirmed"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/client_appointments_controller.rb:20
+  [1m[36mJwtDenylist Exists (2.2ms)[0m  [1m[34mSELECT  1 AS one FROM "jwt_denylist" WHERE "jwt_denylist"."jti" = $1 LIMIT $2[0m  [["jti", "5116057b-db73-4e20-86a8-6ed7d0d44e2c"], ["LIMIT", 1]]
+  ↳ app/controllers/client_appointments_controller.rb:20
+  [1m[36mService Load (1.8ms)[0m  [1m[34mSELECT "services".* FROM "services" WHERE "services"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/services/client_appointments/search.rb:12
+  [1m[36mClientAppointment Load (1.2ms)[0m  [1m[34mSELECT  "client_appointments".* FROM "client_appointments" WHERE "client_appointments"."status" = $1 AND "client_appointments"."service_id" = $2 LIMIT $3 OFFSET $4[0m  [["status", "confirmed"], ["service_id", 2], ["LIMIT", 3], ["OFFSET", 0]]
+  ↳ app/controllers/client_appointments_controller.rb:21
+[active_model_serializers]   [1m[36mService Load (1.7ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/client_appointments_controller.rb:21
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (10.22ms)
+Completed 200 OK in 60ms (Views: 14.3ms | ActiveRecord: 8.5ms)
+
+

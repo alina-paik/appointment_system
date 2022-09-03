@@ -2,12 +2,12 @@
 
 module Services
   class Update < ApplicationService
-    attr_reader  :category_id, :name, :descriprion, :duration, :price, :object
+    attr_reader  :category_id, :name, :description, :duration, :price, :object
 
-    def initialize(category_id:, name:, descriprion:, duration:, price:, object:)
+    def initialize(category_id:, name:, description:, duration:, price:, object:)
       @category_id = category_id
       @name = name
-      @descriprion = descriprion
+      @description = description
       @duration = duration
       @price = price
       @object = object
@@ -26,7 +26,7 @@ module Services
       {
         category_id: category_id,
         name: name,
-        descriprion: descriprion,
+        description: description,
         duration: duration,
         price: price
       }

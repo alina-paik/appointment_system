@@ -50,11 +50,11 @@ class ServicesController < ApplicationController
       end
 
       def service_create_params
-        params.require(:service).permit(:category_id, :name, :descriprion, :duration,
+        params.require(:service).permit(:category_id, :name, :description, :duration,
           :price).merge(user_id: current_user.id).to_h.symbolize_keys
       end
 
       def service_update_params
-        params.require(:service).permit(:category_id, :duration, :name, :descriprion, :price).to_h.symbolize_keys
+        params.require(:service).permit(:category_id, :duration, :name, :description, :price).to_h.symbolize_keys
       end
 end

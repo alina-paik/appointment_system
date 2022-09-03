@@ -2,13 +2,13 @@
 
 module Services
   class Create < ApplicationService
-    attr_reader :user_id, :category_id, :name, :descriprion, :duration, :price
+    attr_reader :user_id, :category_id, :name, :description, :duration, :price
 
-    def initialize(user_id:, category_id:, name:, descriprion:, duration:, price:)
+    def initialize(user_id:, category_id:, name:, description:, duration:, price:)
       @user_id = user_id
       @category_id = category_id
       @name = name
-      @descriprion = descriprion
+      @description = description
       @duration = duration
       @price = price
     end
@@ -27,7 +27,7 @@ module Services
         user_id: user_id,
         category_id: category_id,
         name: name,
-        descriprion: descriprion,
+        description: description,
         duration: duration,
         price: price
       }
